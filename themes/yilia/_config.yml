@@ -2,6 +2,7 @@
 
 menu:
   主页: /
+  # 随笔: /diaries
   相册: /photos
 
 # SubNav
@@ -33,6 +34,9 @@ root: /
 # Content
 
 # 文章太长，截断按钮文字
+auto_excerpt: 
+  enable: true 
+  length: 200
 excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'

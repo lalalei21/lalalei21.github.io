@@ -1,5 +1,6 @@
 ---
 title: 使用 Hexo 搭建 Github 博客
+tags: tools
 ---
 看着大家都在写博客，我也终于忍不住了。
 这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。
@@ -18,13 +19,14 @@ $ hexo -v
 ```
 
 ### 2. 初始化 Blog
-
+<!--more-->
 - 安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建所需要的文件：
 ``` bash
 $ hexo init <folder> 
 $ cd <folder>
 $ npm install
 ```
+
 - 执行下列命令，可以查看在本地预览：
 ``` bash
 $ hexo g   # 生成静态页面
@@ -84,7 +86,7 @@ $ hexo clean  # 清理你的项目缓存
 $ hexo g  # 将你刚刚编写的md编译为浏览器可以识别的html
 $ hexo d  # 发布到远程仓库
 ```
-hexo d 是发布到 <code>_config.yml</code> 中配置的branch分支上（一般都是master主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。
+<code>hexo d</code> 是发布到 <code>_config.yml</code> 中配置的 <code>branch分支上</code>（一般都是 <code>master</code>主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。
 
 - 开始
 ``` bash
