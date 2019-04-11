@@ -19,6 +19,8 @@
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
   
+    <link rel="icon" href="/assets/blogImg/sakura.png">
+  
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
   
@@ -159,7 +161,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/15/hexo/">使用Hexo搭建Github博客</a>
+      <a class="article-title" href="/2018/10/15/hexo/">使用 Hexo 搭建 Github 博客</a>
     </h1>
   
 
@@ -172,15 +174,73 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>看着大家都在写博客，我也终于忍不住了。<br>这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。<br>也是告诉自己不忘初心，持之以恒！</p>
+<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h3><ul>
+<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>，<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node.js</a>，和<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo</a></li>
+<li>验证各安装版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3><ul>
+<li><p>安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建所需要的文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt; </span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行下列命令，可以查看在本地预览：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g   <span class="comment"># 生成静态页面</span></span><br><span class="line">$ hexo s  <span class="comment"># 启动本地 blog 服务器</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>打开浏览器，在地址栏输入 <u>localhost:4000</u>，就可以查看本地博客了</p>
+<h3 id="3-同步-Hexo-到-Github"><a href="#3-同步-Hexo-到-Github" class="headerlink" title="3. 同步 Hexo 到 Github"></a>3. 同步 Hexo 到 Github</h3><ul>
+<li>新建 Github 项目，命名为 XXX.github.io，XXX 为自己的GitHub 用户名。</li>
+<li><p>打开本地文件夹内的 <code>_config.yml</code> 配置文件，进行如下修改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/XXX/XXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git –save  <span class="comment"># 安装 hexo-deployer-git</span></span><br><span class="line">$ hexo g  <span class="comment"># 本地生成静态文件</span></span><br><span class="line">$ hexo d  <span class="comment"># 将本地静态文件推送至Github</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此时，打开浏览器，访问 <a href="http://XXX.github.io" target="_blank" rel="noopener">http://XXX.github.io</a></p>
+<h3 id="4-添加-ssh-key-到-GitHub"><a href="#4-添加-ssh-key-到-GitHub" class="headerlink" title="4. 添加 ssh key 到 GitHub"></a>4. 添加 ssh key 到 GitHub</h3><ul>
+<li><p>检查 ssh key 是否存在，如果存在可以跳过下一步：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成新的 ssh key：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>默认会在相应路径下（<code>~/.ssh/id_rsa.pub</code>）生成<code>id_rsa</code>私钥文件和<code>id_rsa.pub</code>公钥文件，私钥不要公开或者上传，公钥可以上传至github进行验证。</p>
+<ul>
+<li>将ssh key添加至 Github</li>
+</ul>
+<p>用终端打开 <code>id_rsa.pub</code>，复制内容，进入 github -&gt;settings -&gt;ssh and gpg keys -&gt;new ssh key 粘贴。</p>
+<h3 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h3><ul>
+<li><p>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo</a> 官网上选择感兴趣的主题，将主题项目拷贝到 themes 文件夹下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 <code>_config.yml</code>，将主题设置为 yilia</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="问题一：多终端同步-Hexo"><a href="#问题一：多终端同步-Hexo" class="headerlink" title="问题一：多终端同步 Hexo"></a>问题一：多终端同步 Hexo</h2><ul>
+<li>hexo 的原理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  <span class="comment"># 清理你的项目缓存</span></span><br><span class="line">$ hexo g  <span class="comment"># 将你刚刚编写的md编译为浏览器可以识别的html</span></span><br><span class="line">$ hexo d  <span class="comment"># 发布到远程仓库</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>hexo d 是发布到 <code>_config.yml</code> 中配置的branch分支上（一般都是master主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。</p>
+<ul>
+<li>开始<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改的文件加入 git 仓库中</span></span><br><span class="line">$ git add <span class="built_in">source</span> </span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建 hexo 分支</span></span><br><span class="line">$ git branch hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 hexo 分支</span></span><br><span class="line">$ git checkout hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地与 Github 项目对接</span></span><br><span class="line">$ git remote add origin https://github.com/yourname/yourname.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># push 到 Github 项目的 hexo 分支上</span></span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>至此，hexo主站程序上传到hexo分支了，发布文章时，正常流程写md，<code>hexo clean</code>，<code>hexo g -d</code>就可以啦~</p>
+<ul>
+<li><p>另外一个终端更新</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将Github中hexo分支clone到本地</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/XXX/XXX.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># cheackout 远程代码到本地hexo分支</span></span><br><span class="line">$ git checkout -b hexo origin/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span></span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个.md文件，并编辑完成自己的博客内容</span></span><br><span class="line">$ hexo new post <span class="string">"new blog name"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 经测试每次只要更新source中的文件到Github中即可，因为只是新建了一篇新博客</span></span><br><span class="line">$ git add <span class="built_in">source</span></span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新分支</span></span><br><span class="line">$ git push origin hexo</span><br><span class="line"><span class="comment"># push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master</span></span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>每次切换终端时，记得先执行 git pull origin hexo 将本地与远程同步哦～<br>&nbsp;</p>
+<h2 id="问题二：新换-theme-无法同步远程"><a href="#问题二：新换-theme-无法同步远程" class="headerlink" title="问题二：新换 theme 无法同步远程"></a>问题二：新换 theme 无法同步远程</h2></li>
+</ul>
+<p>刚开始我的主题是 next，后来嫌弃它太单调了，就换成了现在的主题，但是发现 push 不上去了，于是开始各种 Google。<br>终于找到了可靠的解决方案。<a href="https://pangjunpeng.com/2018/03/22/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E8%BF%99%E5%87%A0%E5%A4%A9%E6%90%AD%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A4%9A%E7%BB%88%E7%AB%AF%E6%9B%B4%E6%96%B0hexo%EF%BC%8Cthems%E4%B8%BB%E9%A2%98%E6%8F%90%E4%BA%A4%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%AD%89/" target="_blank" rel="noopener">原文链接点这里</a><br>由于 themes 中 yilia 是 clone 的，所以不在我的版本库中，自然也就 push 不上去。<br>需要删除 .git 文件夹，重新 <code>add commit push</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -rf --cached themes/yilia</span><br><span class="line">$ git add themes/yilia/*</span><br><span class="line">$ git commit</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
+<p>在此感谢提供各种解决方法的博主们～<br>出现的问题其实还有一些，但是 Google 就够了，以后继续加油吧！</p>
 
       
 
