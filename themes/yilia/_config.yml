@@ -65,7 +65,8 @@ top: true
 # Miscellaneous
 baidu_analytics: ''
 google_analytics: ''
-favicon: 
+# https://icons8.com/icons/set/flower
+favicon: /assets/blogImg/sakura.png
 
 #你的头像url
 avatar: /assets/blogImg/photo.jpeg
