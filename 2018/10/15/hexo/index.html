@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/lalalei21/lalalei21.github.io">
   <title>使用 Hexo 搭建 Github 博客 | Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog 安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建">
+  <meta name="description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
+<meta name="keywords" content="tools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Hexo 搭建 Github 博客">
 <meta property="og:url" content="https://github.com/lalalei21/lalalei21.github.io/2018/10/15/hexo/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
-<meta property="og:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog 安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建">
+<meta property="og:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-11T09:41:20.978Z">
+<meta property="og:updated_time" content="2019-04-11T11:30:37.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo 搭建 Github 博客">
-<meta name="twitter:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog 安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建">
+<meta name="twitter:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
   
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
@@ -182,7 +183,8 @@
 <li>验证各安装版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3><ul>
+<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3><a id="more"></a>
+<ul>
 <li><p>安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建所需要的文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt; </span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 </li>
@@ -227,7 +229,7 @@
 <li>hexo 的原理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  <span class="comment"># 清理你的项目缓存</span></span><br><span class="line">$ hexo g  <span class="comment"># 将你刚刚编写的md编译为浏览器可以识别的html</span></span><br><span class="line">$ hexo d  <span class="comment"># 发布到远程仓库</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>hexo d 是发布到 <code>_config.yml</code> 中配置的branch分支上（一般都是master主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。</p>
+<p><code>hexo d</code> 是发布到 <code>_config.yml</code> 中配置的 <code>branch分支上</code>（一般都是 <code>master</code>主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。</p>
 <ul>
 <li>开始<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改的文件加入 git 仓库中</span></span><br><span class="line">$ git add <span class="built_in">source</span> </span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建 hexo 分支</span></span><br><span class="line">$ git branch hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 hexo 分支</span></span><br><span class="line">$ git checkout hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地与 Github 项目对接</span></span><br><span class="line">$ git remote add origin https://github.com/yourname/yourname.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># push 到 Github 项目的 hexo 分支上</span></span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
 </li>
@@ -282,6 +284,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tools</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -344,6 +357,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/23/2017.3.23_life/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">生命的意义-约翰福音</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -479,6 +502,14 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">life</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
