@@ -1,6 +1,8 @@
 ---
 title: 使用 Hexo 搭建 Github 博客
 tags: tools
+toc: true
+date: 2019-04-11 20:17:11
 ---
 看着大家都在写博客，我也终于忍不住了。
 这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。
@@ -119,17 +121,6 @@ $ git checkout -b hexo origin/hexo
 # 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init
 $ npm install
 
-# 新建一个.md文件，并编辑完成自己的博客内容
-$ hexo new post "new blog name"
-
-# 经测试每次只要更新source中的文件到Github中即可，因为只是新建了一篇新博客
-$ git add source
-$ git commit -m "your desciption"
-
-# 更新分支
-$ git push origin hexo
-# push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master
-$ hexo d -g
 ```
 
 - 每次切换终端时，记得先执行 git pull origin hexo 将本地与远程同步哦～
