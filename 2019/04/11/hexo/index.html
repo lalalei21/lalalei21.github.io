@@ -12,11 +12,11 @@
 <meta name="keywords" content="tools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 Hexo 搭建 Github 博客">
-<meta property="og:url" content="https://github.com/lalalei21/lalalei21.github.io/2018/10/15/hexo/index.html">
+<meta property="og:url" content="https://github.com/lalalei21/lalalei21.github.io/2019/04/11/hexo/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
 <meta property="og:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-11T11:30:37.721Z">
+<meta property="og:updated_time" content="2019-04-11T12:18:05.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo 搭建 Github 博客">
 <meta name="twitter:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
@@ -36,6 +36,16 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?5e9af22a224aba7ecdee9f432fd0f33c";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
 
@@ -61,6 +71,8 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/tags/diaries">随笔</a></li>
 	        
 				<li><a href="/photos">相册</a></li>
 	        
@@ -120,6 +132,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -137,12 +151,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/photos">相册</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/diaries">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/photos">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -169,8 +185,8 @@
   
 
         
-        <a href="/2018/10/15/hexo/" class="archive-article-date">
-  	<time datetime="2018-10-15T01:11:09.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-15</time>
+        <a href="/2019/04/11/hexo/" class="archive-article-date">
+  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
@@ -237,7 +253,7 @@
 <p>至此，hexo主站程序上传到hexo分支了，发布文章时，正常流程写md，<code>hexo clean</code>，<code>hexo g -d</code>就可以啦~</p>
 <ul>
 <li><p>另外一个终端更新</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将Github中hexo分支clone到本地</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/XXX/XXX.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># cheackout 远程代码到本地hexo分支</span></span><br><span class="line">$ git checkout -b hexo origin/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span></span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个.md文件，并编辑完成自己的博客内容</span></span><br><span class="line">$ hexo new post <span class="string">"new blog name"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 经测试每次只要更新source中的文件到Github中即可，因为只是新建了一篇新博客</span></span><br><span class="line">$ git add <span class="built_in">source</span></span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新分支</span></span><br><span class="line">$ git push origin hexo</span><br><span class="line"><span class="comment"># push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master</span></span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将Github中hexo分支clone到本地</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/XXX/XXX.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># cheackout 远程代码到本地hexo分支</span></span><br><span class="line">$ git checkout -b hexo origin/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span></span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>每次切换终端时，记得先执行 git pull origin hexo 将本地与远程同步哦～<br>&nbsp;</p>
 <h2 id="问题二：新换-theme-无法同步远程"><a href="#问题二：新换-theme-无法同步远程" class="headerlink" title="问题二：新换 theme 无法同步远程"></a>问题二：新换 theme 无法同步远程</h2></li>
@@ -345,7 +361,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/lalalei21/lalalei21.github.io/2018/10/15/hexo/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/lalalei21/lalalei21.github.io/2019/04/11/hexo/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -380,6 +396,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客"><span class="toc-number">1.</span> <span class="toc-text">搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工作"><span class="toc-number">1.1.</span> <span class="toc-text">1. 准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-初始化-Blog"><span class="toc-number">1.2.</span> <span class="toc-text">2. 初始化 Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-同步-Hexo-到-Github"><span class="toc-number">1.3.</span> <span class="toc-text">3. 同步 Hexo 到 Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加-ssh-key-到-GitHub"><span class="toc-number">1.4.</span> <span class="toc-text">4. 添加 ssh key 到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-更换主题"><span class="toc-number">1.5.</span> <span class="toc-text">5. 更换主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一：多终端同步-Hexo"><span class="toc-number">2.</span> <span class="toc-text">问题一：多终端同步 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题二：新换-theme-无法同步远程"><span class="toc-number">3.</span> <span class="toc-text">问题二：新换 theme 无法同步远程</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -508,7 +537,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">life</a>
+                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
               </li>
             
             <div class="clearfix"></div>
