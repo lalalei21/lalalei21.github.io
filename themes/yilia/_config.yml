@@ -9,7 +9,7 @@ menu:
 subnav:
   github: "https://github.com/lalalei21"
   weibo: "https://weibo.com/5709528244/profile"
-  rss: /atom.xml
+  # rss: /atom.xml
   # zhihu: "#"
   #qq: "#"
   #weixin: "#"
@@ -46,7 +46,7 @@ open_in_new: false
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 2
 # 打赏wording
-reward_wording: '谢谢你请我吃糖果'
+reward_wording: '谢谢你请我吃糖(*ﾟ▽ﾟ*)'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 alipay: /assets/img/alipay.jpg
 # 微信二维码图片地址
@@ -100,6 +100,18 @@ gitment_oauth:
   client_id: ''           #client ID
   client_secret: ''       #client secret
 
+# 配置gitalk
+gitalk: 
+  enable: true
+  client_id: 1c92f03bc20099211872
+  client_secret: 5c5b458be40fd177ac8592700e296b1465d86f36
+  repo: lalalei21.github.io
+  owner: lalalei21
+  admin: lalalei21
+
+busuanzi_count:
+  enable: true
+
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
   # 头像上面的背景颜色
@@ -119,15 +131,10 @@ slider:
 #  friends: false
 smart_menu:
   innerArchive: '所有文章'
-  friends: false
+  friends: '友链'
   aboutme: '关于我'
 
 friends:
-  友情链接1: http://localhost:4000/
-  友情链接2: http://localhost:4000/
-  友情链接3: http://localhost:4000/
-  友情链接4: http://localhost:4000/
-  友情链接5: http://localhost:4000/
-  友情链接6: http://localhost:4000/
+  小苑同志的博客: https://yuanwenjian.github.io
 
-aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+aboutme: Lalalei<br><br>东北大学研究生在读<br>爱吃，爱玩，爱笑，也爱学习，哈哈<br>希望未来能一直开心快乐<br>不忘初心，就是这样
