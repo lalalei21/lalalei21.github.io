@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lalalei&#39;s blog">
 <meta property="og:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-11T12:18:05.356Z">
+<meta property="og:updated_time" content="2019-04-12T04:36:23.077Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用 Hexo 搭建 Github 博客">
 <meta name="twitter:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
@@ -84,6 +84,8 @@ var _hmt = _hmt || [];
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -184,6 +186,16 @@ var _hmt = _hmt || [];
     </h1>
   
 
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;cursor: text">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#f173ac;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
         
         <a href="/2019/04/11/hexo/" class="archive-article-date">
   	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
@@ -274,7 +286,7 @@ var _hmt = _hmt || [];
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖(*ﾟ▽ﾟ*)<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     <div class="reward-box-item">
@@ -375,6 +387,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2019/04/12/yilia-theme-md/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hexo 主题 yilia 优化
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/03/23/2017.3.23_life/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">生命的意义-约翰福音</div>
@@ -425,6 +446,26 @@ var _hmt = _hmt || [];
 
   
 
+  
+    <div id="gitalk-container" style="padding: 0 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '1c92f03bc20099211872',
+  clientSecret: '5c5b458be40fd177ac8592700e296b1465d86f36',
+  repo: 'lalalei21.github.io',
+  owner: 'lalalei21',
+  admin: 'lalalei21',
+  id: 'https://github.com/lalalei21/lalalei21.github.io/2019/04/11/hexo/',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+
 
           </div>
         </div>
@@ -434,13 +475,22 @@ var _hmt = _hmt || [];
     <div id="footer-info">
     	<div class="footer-left">
     		&copy; 2019 Lalalei
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      </div>
+      <span id="busuanzi_container_site_pv">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+      </span>
+      |
+      <span id="busuanzi_container_site_uv">
+        访客数：<span id="busuanzi_value_site_uv"></span>
+      </span>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      </div>
     </div>
   </div>
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -495,6 +545,8 @@ MathJax.Hub.Queue(function() {
       
     
       
+      
+      
     
       
       
@@ -506,13 +558,15 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -538,6 +592,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">diaries</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
@@ -584,11 +642,43 @@ MathJax.Hub.Queue(function() {
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://yuanwenjian.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>小苑同志的博客</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Lalalei&lt;br&gt;&lt;br&gt;东北大学研究生在读&lt;br&gt;爱吃，爱玩，爱笑，也爱学习，哈哈&lt;br&gt;希望未来能一直开心快乐&lt;br&gt;不忘初心，就是这样</div>
   	  	
     	</section>
     

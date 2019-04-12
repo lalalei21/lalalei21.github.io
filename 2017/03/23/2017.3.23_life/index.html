@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lalalei&#39;s blog">
 <meta property="og:description" content="马可以跑得很快，鱼可以游的很深，鸟可以飞的很高，这都是它们的特点，为什么呢？马跑得很快，但是马不会四处去问自己为什么跑的快；鱼游的深，但是鱼不会四处找答案自己为什么游的深；鸟可以在天空翱翔，但是鸟不会去质疑为什么自己可以飞的那么高。我是人，我不会那么快，那么游，那么飞，但是我能够去找、去追求那个为什么。其实，这就是人类的不同啊，这就是人类的那颗心啊。 生和死，不重要，重要的是去尊重生命；生命是否高">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-11T12:01:54.034Z">
+<meta property="og:updated_time" content="2019-04-12T03:35:45.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="生命的意义-约翰福音">
 <meta name="twitter:description" content="马可以跑得很快，鱼可以游的很深，鸟可以飞的很高，这都是它们的特点，为什么呢？马跑得很快，但是马不会四处去问自己为什么跑的快；鱼游的深，但是鱼不会四处找答案自己为什么游的深；鸟可以在天空翱翔，但是鸟不会去质疑为什么自己可以飞的那么高。我是人，我不会那么快，那么游，那么飞，但是我能够去找、去追求那个为什么。其实，这就是人类的不同啊，这就是人类的那颗心啊。 生和死，不重要，重要的是去尊重生命；生命是否高">
@@ -84,6 +84,8 @@ var _hmt = _hmt || [];
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -184,6 +186,16 @@ var _hmt = _hmt || [];
     </h1>
   
 
+        <!--显示阅读次数-->
+        
+          <br/>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;cursor: text">
+          <span class="icon-sort"></span>
+          <span id="busuanzi_container_page_pv" style="color:#f173ac;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
         
         <a href="/2017/03/23/2017.3.23_life/" class="archive-article-date">
   	<time datetime="2017-03-23T10:14:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
@@ -194,7 +206,9 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>马可以跑得很快，鱼可以游的很深，鸟可以飞的很高，这都是它们的特点，为什么呢？马跑得很快，但是马不会四处去问自己为什么跑的快；鱼游的深，但是鱼不会四处找答案自己为什么游的深；鸟可以在天空翱翔，但是鸟不会去质疑为什么自己可以飞的那么高。我是人，我不会那么快，那么游，那么飞，但是我能够去找、去追求那个为什么。其实，这就是人类的不同啊，这就是人类的那颗心啊。</p>
-<p>生和死，不重要，重要的是去尊重生命；生命是否高贵不重要，重要的是尊重自己的存在；在自己还有生命的时候，在自己还存在的时候，带着自己那颗人类的心，永不停息的追寻那个答案。有没有答案，不重要，重要的是要充满期待。还记得潘多拉盒子里的最后一件礼物吗？<br><a id="more"></a><br>希望。</p>
+<p>生和死，不重要，重要的是去尊重生命；生命是否高贵不重要，重要的是尊重自己的存在；在自己还有生命的时候，在自己还存在的时候，带着自己那颗人类的心，永不停息的追寻那个答案。有没有答案，不重要，重要的是要充满期待。还记得潘多拉盒子里的最后一件礼物吗？</p>
+<a id="more"></a>
+<p>希望。</p>
 <p>就算会质疑，就算问为什么，那又怎么样？不需要为此痛苦或者不安，因为人类就是这样的，就是有一颗充满好奇、期待、希望，永不停息的心脏。<br>从前我是瞎的，如今我看得见。</p>
 
       
@@ -209,7 +223,7 @@ var _hmt = _hmt || [];
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖(*ﾟ▽ﾟ*)<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
                     <div class="reward-box-item">
@@ -351,6 +365,26 @@ var _hmt = _hmt || [];
 
   
 
+  
+    <div id="gitalk-container" style="padding: 0 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '1c92f03bc20099211872',
+  clientSecret: '5c5b458be40fd177ac8592700e296b1465d86f36',
+  repo: 'lalalei21.github.io',
+  owner: 'lalalei21',
+  admin: 'lalalei21',
+  id: 'https://github.com/lalalei21/lalalei21.github.io/2017/03/23/2017.3.23_life/',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
+
 
           </div>
         </div>
@@ -360,13 +394,22 @@ var _hmt = _hmt || [];
     <div id="footer-info">
     	<div class="footer-left">
     		&copy; 2019 Lalalei
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      </div>
+      <span id="busuanzi_container_site_pv">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+      </span>
+      |
+      <span id="busuanzi_container_site_uv">
+        访客数：<span id="busuanzi_value_site_uv"></span>
+      </span>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      </div>
     </div>
   </div>
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -421,6 +464,8 @@ MathJax.Hub.Queue(function() {
       
     
       
+      
+      
     
       
       
@@ -432,13 +477,15 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -464,6 +511,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">diaries</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
@@ -510,11 +561,43 @@ MathJax.Hub.Queue(function() {
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://yuanwenjian.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>小苑同志的博客</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Lalalei&lt;br&gt;&lt;br&gt;东北大学研究生在读&lt;br&gt;爱吃，爱玩，爱笑，也爱学习，哈哈&lt;br&gt;希望未来能一直开心快乐&lt;br&gt;不忘初心，就是这样</div>
   	  	
     	</section>
     
