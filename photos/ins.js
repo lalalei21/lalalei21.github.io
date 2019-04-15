@@ -116,9 +116,8 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'https://github.com/lalalei21/backupBlog/blob/master/min_photos/' + data.link[i];
-          var src = 'https://github.com/lalalei21/backupBlog/blob/master/photos/' + data.link[i];
-          // var minSrc = 'http://litten.me/ins/Bh5q8d6lIYI.jpg'
+          var minSrc = 'https://raw.githubusercontent.com/lalalei21/backupBlog/master/min_photos/' + data.link[i];
+          var src = 'https://raw.githubusercontent.com/lalalei21/backupBlog/master/photos/' + data.link[i];
           var type = data.type[i];
           var target = src;
           // var target = src + (type === 'video' ? '.mp4' : '.jpg');
