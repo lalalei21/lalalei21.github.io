@@ -9,7 +9,7 @@
           "2019-4-6_nail.jpg"
         ],
         "text": [
-          "终于做指甲了，猜猜哪个是我呢，嘻嘻"
+          "\u7ec8\u4e8e\u505a\u6307\u7532\u4e86\uff0c\u731c\u731c\u54ea\u4e2a\u662f\u6211\u5462\uff0c\u563b\u563b"
         ],
         "type": [
           "image"
@@ -27,13 +27,73 @@
           "2019-3-21_snow1.jpg"
         ],
         "text": [
-          "这次回家参加朋友婚礼，路过武汉，热干面还是蔡林记的最好吃了，和桂花米酒一起真是绝配",
-          "snow2",
-          "snow1"
+          "\u8fd9\u6b21\u56de\u5bb6\u53c2\u52a0\u670b\u53cb\u5a5a\u793c\uff0c\u8def\u8fc7\u6b66\u6c49\uff0c\u70ed\u5e72\u9762\u8fd8\u662f\u8521\u6797\u8bb0\u7684\u6700\u597d\u5403\u4e86\uff0c\u548c\u6842\u82b1\u7c73\u9152\u4e00\u8d77\u771f\u662f\u7edd\u914d",
+          "\u96ea\u82b1",
+          "\u96ea\u82b1"
         ],
         "type": [
           "image",
           "image",
+          "image"
+        ]
+      }
+    },
+    {
+      "date": "2018-10",
+      "arr": {
+        "year": 2018,
+        "month": 10,
+        "link": [
+          "2018-10-6_taibaishan.jpg"
+        ],
+        "text": [
+          "\u53bb\u5929\u4e09\u767e\u91cc\uff0c\u9088\u5c14\u4e0e\u4e16\u7edd\u3002\u548c\u82b1\u82b1\u4e00\u8d77\u4e24\u5929\u4e00\u591c\u7684\u592a\u767d\u5c71\u4e4b\u65c5\uff5e"
+        ],
+        "type": [
+          "image"
+        ]
+      }
+    },
+    {
+      "date": "2018-6",
+      "arr": {
+        "year": 2018,
+        "month": 6,
+        "link": [
+          "2018-6-17_chongqing.jpg",
+          "2018-6-21_chakayanhu2.jpg",
+          "2018-6-21_chakayanhu3.jpg",
+          "2018-6-21_chakayanhu1.jpg",
+          "2018-6-24_zhujiang.jpg"
+        ],
+        "text": [
+          "\u5728\u91cd\u5e86\uff0c\u548c\u5b9d\u8d1d\u6811\u6811\u6109\u5feb\u76843\u5929\uff0c\u8fa3\u7684\u771f\u591f\u5473\uff0c\u6709\u70b9\u60f3\u91cd\u5e86\u7684\u706b\u9505\u4e86\uff0c\u4e5f\u6709\u70b9\u60f3\u5979\u4e86\uff0c\u54c8\u54c8",
+          "\u53bb\u53c2\u52a0\u5c0f\u8587\u8587\u548c\u5c0f\u97e9\u540c\u5fd7\u7684\u5a5a\u793c\uff0c\u53d4\u53d4\u5e26\u6211\u4eec\u53bb\u9752\u6d77\u6e56\u548c\u8336\u5361\u76d0\u6e56\u73a9\uff0c\u771f\u7f8e\u5440\uff0c\u53ea\u53ef\u60dc\u65f6\u95f4\u4e0d\u591f\uff0c\u8fd8\u5f97\u53bb\u4e00\u8d9f\u624d\u884c\u5462",
+          "\u4ee5\u6e56\u4e4b\u540d\uff0c\u51c0\u5316\u5fc3\u7075~",
+          "\u4ee5\u6e56\u4e4b\u540d\uff0c\u51c0\u5316\u5fc3\u7075~",
+          "\u548c\u5988\u5988\u5728\u73e0\u6c5f\u8fb9\u4e0a\u6563\u6b65"
+        ],
+        "type": [
+          "image",
+          "image",
+          "image",
+          "image",
+          "image"
+        ]
+      }
+    },
+    {
+      "date": "2018-2",
+      "arr": {
+        "year": 2018,
+        "month": 2,
+        "link": [
+          "2018-2-11_tree.jpg"
+        ],
+        "text": [
+          "\u4e00\u9897\u7ed3\u6210\u51b0\u51cc\u7684\u6811"
+        ],
+        "type": [
           "image"
         ]
       }
