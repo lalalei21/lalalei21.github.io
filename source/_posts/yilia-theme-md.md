@@ -4,6 +4,7 @@ date: 2019-04-12 11:53:19
 tags: hexo
 toc: true
 comments: true
+reward: true
 ---
 好吧，我承认自己是一个外貌协会。
 既然倒腾了这个博客，就尽量让自己感到舒服😌。
@@ -142,6 +143,7 @@ model:
 1. [给博客添加能动的看板娘 (Live2D)- 将其添加到网页上吧](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)
 2. [网页添加 Live2D 看板娘](https://www.fghrsh.net/post/123.html)
 3. [Live2D Widget](https://github.com/stevenjoezhang/live2d-widget)
+
 
 &nbsp;
 更多优化持续更新...^^

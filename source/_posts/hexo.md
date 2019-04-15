@@ -4,6 +4,7 @@ tags: hexo
 toc: true
 date: 2019-04-11 20:17:11
 comments: true
+reward: true
 ---
 看着大家都在写博客，我也终于忍不住了。
 这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。
