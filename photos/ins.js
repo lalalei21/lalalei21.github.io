@@ -119,7 +119,7 @@
           var minSrc = 'https://github.com/lalalei21/backupBlog/blob/master/min_photos/' + data.link[i];
           var src = 'https://github.com/lalalei21/backupBlog/blob/master/photos/' + data.link[i];
           var type = data.type[i];
-          // var target = src + (type === 'video' ? '.mp4' : '.jpg');
+          var target = src + (type === 'video' ? '.mp4' : '.jpg');
           // src += '.jpg';
 
           liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">\
