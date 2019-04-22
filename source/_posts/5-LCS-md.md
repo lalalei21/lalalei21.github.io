@@ -127,7 +127,6 @@ int expandAroundCenter(String s, int l, int r) {
 &nbsp;
 ### 方案5: Manacher's Algorithm（马拉车算法）
 - [算法思想 - 这篇介绍的很详细](https://blog.csdn.net/liuwei0604/article/details/50414542)，在线性时间复杂度内求出一个字符串的最长回文字串
-
 - 实现代码：
 ```java
 public String longestPalindrome(String s) {
