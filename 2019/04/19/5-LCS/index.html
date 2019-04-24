@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lalalei21.github.io">
-  <title>Archives | Lalalei&#39;s blog</title>
+  <title>Longest Palindromic Substring (最长回文子串) | Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lalalei&#39;s blog">
-<meta property="og:url" content="https://lalalei21.github.io/archives/index.html">
+  <meta name="description" content="Description:Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. Do it now! 方案1: Longest Common Substring（类似于求最长公共子串问题） 最长公共子串参考文档 想法：S‘为">
+<meta name="keywords" content="leetcode,java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Longest Palindromic Substring (最长回文子串)">
+<meta property="og:url" content="https://lalalei21.github.io/2019/04/19/5-LCS/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
+<meta property="og:description" content="Description:Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. Do it now! 方案1: Longest Common Substring（类似于求最长公共子串问题） 最长公共子串参考文档 想法：S‘为">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-04-23T02:52:57.671Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lalalei&#39;s blog">
+<meta name="twitter:title" content="Longest Palindromic Substring (最长回文子串)">
+<meta name="twitter:description" content="Description:Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. Do it now! 方案1: Longest Common Substring（类似于求最长公共子串问题） 最长公共子串参考文档 想法：S‘为">
   
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
@@ -169,78 +174,144 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-5-LCS" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/23/14-LCP/" class="archive-article-date">
-  	<time datetime="2019-04-23T02:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/23/14-LCP/">Longest Common Prefix（最长公共前缀）</a>
+    <h1 class="article-title" itemprop="name">
+      Longest Palindromic Substring (最长回文子串)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/19/5-LCS/" class="archive-article-date">
+        <!--显示阅读次数-->
+        
+          <br>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;cursor: text">
+          <span class="icon-sort"></span>
+          <span style="color:#f173ac;font-size:14px;display: inline;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        
+        <a href="/2019/04/19/5-LCS/" class="archive-article-date">
   	<time datetime="2019-04-19T05:04:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/19/5-LCS/">Longest Palindromic Substring (最长回文子串)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Description:</strong><br>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. <a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">Do it now!</a></p>
+<h3 id="方案1-Longest-Common-Substring（类似于求最长公共子串问题）"><a href="#方案1-Longest-Common-Substring（类似于求最长公共子串问题）" class="headerlink" title="方案1: Longest Common Substring（类似于求最长公共子串问题）"></a>方案1: Longest Common Substring（类似于求最长公共子串问题）</h3><ul>
+<li><a href="https://www.kancloud.cn/digest/pieces-algorithm/163624" target="_blank" rel="noopener">最长公共子串参考文档</a></li>
+<li>想法：S‘为S的转置，求S和S’的最长公共子串<blockquote>
+<p>例子：S = “c<strong>aba</strong>“, S’= “<strong>aba</strong>c”.  -&gt; SS = “aba”</p>
+</blockquote>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>产生的错误：<blockquote>
+<p>例子：S = “<strong>aacd</strong>fg<strong>dcaa</strong>“, S’= “<strong>aacd</strong>gf<strong>dcaa</strong>“. 即当S的其它部分出现非回文子串的转置时，会产生错误，此时输出 SS = “abcad”</p>
+</blockquote>
+</li>
+<li>解决方案：增加判断条件，候选子串的索引必须与其转置的索引相同<blockquote>
+<p>$i + j + 2 - a[i][j] == len$</p>
+</blockquote>
+</li>
+<li><p>实现代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;    </span><br><span class="line">  <span class="keyword">if</span>(s.length() &lt;= <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">  <span class="keyword">if</span>(s.length() == <span class="number">2</span>) <span class="keyword">return</span> s.charAt(<span class="number">0</span>) == s.charAt(<span class="number">1</span>) ? s : s.substring(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">int</span> max_i = <span class="number">0</span>, max_len = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> len = s.length();</span><br><span class="line">  <span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[len][len];</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">      a[i][<span class="number">0</span>] = s.charAt(len - <span class="number">1</span>) == s.charAt(i) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">      a[<span class="number">0</span>][i] = s.charAt(<span class="number">0</span>) == s.charAt(len - i - <span class="number">1</span>) ? <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; len; i++) &#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">          <span class="keyword">if</span> (s.charAt(i) == s.charAt(len-j-<span class="number">1</span>)) &#123;</span><br><span class="line">              a[i][j] = a[i-<span class="number">1</span>][j-<span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">              <span class="keyword">if</span> (i + j + <span class="number">2</span> - a[i][j] == len &amp;&amp; a[i][j] &gt; max_len) &#123;</span><br><span class="line">                max_i = i;</span><br><span class="line">                max_len = a[i][j];</span><br><span class="line">              &#125;</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              a[i][j] = <span class="number">0</span>;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> s.substring(max_i - max_len + <span class="number">1</span>, max_i + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间复杂度：$O(n^2)$，空间复杂度：$O(n^2)$</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="方案2-Brute-Force（暴力解法）"><a href="#方案2-Brute-Force（暴力解法）" class="headerlink" title="方案2: Brute Force（暴力解法）"></a>方案2: Brute Force（暴力解法）</h3><ul>
+<li>想法：很明显，就是枚举全部可能的子串，验证它是否为回文串。</li>
+<li>时间复杂度：$O(n^3)$<blockquote>
+<p>假设 $n$ = 输入串的长度，那么它的子串数为 $\frac{n*(n-1)}{2}$，每一次验证需要 $O(n)$ 时间</p>
+</blockquote>
+</li>
+<li>空间复杂度：$O(1)$</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="方案3-Dynamic-Programming（动态规划）"><a href="#方案3-Dynamic-Programming（动态规划）" class="headerlink" title="方案3: Dynamic Programming（动态规划）"></a>方案3: Dynamic Programming（动态规划）</h3><ul>
+<li>想法：为了改进暴力解法，我们需要观察如何在验证回文数时避免不必要的重复计算。<blockquote>
+<ol>
+<li>例子：”bab”是回文数，那么只要首位字母相等，那么”babab”一定也是。</li>
+<li>公式：$$<br> define P(i, j) =<br> \begin{cases}<br> true, &amp; \text{if the substring $S_i$..$S_j$ is a palindrome} \\<br> false, &amp; \text{otherwise}<br> \end{cases}<br>$$<br>则，$P(i, j) = (P(i+1, j-1)\; and \; S_i = S_j)$<br>初始化为，$P(i, i) = true$，$P(i, i+1) = (S_i = S_{i+1})$</li>
+</ol>
+</blockquote>
+</li>
+<li><p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(s.length() &lt;= <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">  <span class="keyword">int</span> max_i = <span class="number">0</span>, max_j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> len = s.length();</span><br><span class="line">  <span class="keyword">boolean</span>[][] a = <span class="keyword">new</span> <span class="keyword">boolean</span>[len][len];</span><br><span class="line">  a[len-<span class="number">1</span>][len-<span class="number">1</span>] = <span class="keyword">true</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = len-<span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">      a[i][i] = <span class="keyword">true</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">          a[i][j] = s.charAt(i) == s.charAt(j) &amp;&amp; (j==i+<span class="number">1</span> || a[i+<span class="number">1</span>][j-<span class="number">1</span>]);</span><br><span class="line">          <span class="keyword">if</span>(a[i][j] &amp;&amp; j - i &gt; max_j - max_i) &#123;</span><br><span class="line">              max_j = j;</span><br><span class="line">              max_i = i;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> s.substring(max_i, max_j + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间复杂度：$O(n^2)$，空间复杂度：$O(n^2)$</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="方案4-Expand-Around-Center（中心扩展法）"><a href="#方案4-Expand-Around-Center（中心扩展法）" class="headerlink" title="方案4: Expand Around Center（中心扩展法）"></a>方案4: Expand Around Center（中心扩展法）</h3><ul>
+<li>想法：每个回文串都有一个中心，一个长度为 $n$ 的字符串可能的中心点有 $2n-1$ 个。通过中心向两边扩展，验证扩展的字符串是否为回文。<blockquote>
+<p>例子：”aba”的中心是”b”，”abba”的中心是2个b之间。则字符串的可能中心数 = n(字符数) + (n-1)(字符间的空位数)</p>
+</blockquote>
+</li>
+<li><p>实现代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(s.length() &lt;= <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">    <span class="keyword">int</span> max_i = <span class="number">0</span>, max_j = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> len1 = expandAroundCenter(s, i, i);</span><br><span class="line">        <span class="keyword">int</span> len2 = expandAroundCenter(s, i, i+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> len = len1 &gt; len2 ? len1 : len2;</span><br><span class="line">        <span class="keyword">if</span>(len &gt; max_j - max_i) &#123;</span><br><span class="line">            max_i = i - (len-<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">            max_j = max_i + len;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.substring(max_i, max_j);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">expandAroundCenter</span><span class="params">(String s, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (l &gt;= <span class="number">0</span> &amp;&amp; r &lt; s.length() &amp;&amp; s.charAt(l) == s.charAt(r)) &#123;</span><br><span class="line">        l--;</span><br><span class="line">        r++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r - l - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间复杂度：$O(n^2)$，空间复杂度：$O(1)$</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="方案5-Manacher’s-Algorithm（马拉车算法）"><a href="#方案5-Manacher’s-Algorithm（马拉车算法）" class="headerlink" title="方案5: Manacher’s Algorithm（马拉车算法）"></a>方案5: Manacher’s Algorithm（马拉车算法）</h3><ul>
+<li><a href="https://blog.csdn.net/liuwei0604/article/details/50414542" target="_blank" rel="noopener">算法思想 - 这篇介绍的很详细</a>，在线性时间复杂度内求出一个字符串的最长回文字串</li>
+<li><p>实现代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span>[] T = <span class="keyword">new</span> <span class="keyword">char</span>[s.length()*<span class="number">2</span> + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">int</span>[] Len = <span class="keyword">new</span> <span class="keyword">int</span>[T.length];</span><br><span class="line">    <span class="comment">// p0表示最长回文子串的中心位索引，p表示最长回文子串的最远字符索引</span></span><br><span class="line">    <span class="keyword">int</span> p0 = <span class="number">0</span>, p = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// aaaba -&gt; #a#a#a#b#a</span></span><br><span class="line">    <span class="comment">// 由于除了空字符以外的在s中也可能会出现，在这里不进行赋值默认为空字符，但是注释中为了方便会用#代替空字符</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++)&#123;</span><br><span class="line">        T[<span class="number">2</span>*i+<span class="number">1</span>] = s.charAt(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 0索引处永远为'#'</span></span><br><span class="line">    Len[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; T.length; i++)&#123;</span><br><span class="line">        <span class="comment">// 算法的核心步骤</span></span><br><span class="line">        Len[i] = i &lt; p ? Math.min(Len[<span class="number">2</span>*p0 - i], p-i+<span class="number">1</span>) : <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(i-Len[i] &gt;= <span class="number">0</span> &amp;&amp; i+Len[i] &lt; T.length &amp;&amp; T[i-Len[i]] == T[i+Len[i]]) &#123;</span><br><span class="line">            Len[i]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 这里用 &gt; 代替 &gt;= 会节省算法时间</span></span><br><span class="line">        <span class="keyword">if</span> (Len[i] &gt; p-p0+<span class="number">1</span>) &#123;</span><br><span class="line">            p0 = i;</span><br><span class="line">            p = i + Len[i] - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> s.substring((<span class="number">2</span>*p0-p)/<span class="number">2</span>, p/<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>时间复杂度：$O(n)$，空间复杂度：$O(n)$</p>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖(*ﾟ▽ﾟ*)<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -256,143 +327,148 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/12/yilia-theme/" class="archive-article-date">
-  	<time datetime="2019-04-12T03:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/12/yilia-theme/">Hexo 主题 yilia 优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/11/hexo/" class="archive-article-date">
-  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/11/hexo/">使用 Hexo 搭建 Github 博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/23/2017.3.23_life/" class="archive-article-date">
-  	<time datetime="2017-03-23T10:14:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/23/2017.3.23_life/">生命的意义-约翰福音</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">diaries</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2019/04/19/5-LCS/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/04/23/14-LCP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Longest Common Prefix（最长公共前缀）
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/04/12/yilia-theme/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo 主题 yilia 优化</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#方案1-Longest-Common-Substring（类似于求最长公共子串问题）"><span class="toc-number">1.</span> <span class="toc-text">方案1: Longest Common Substring（类似于求最长公共子串问题）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案2-Brute-Force（暴力解法）"><span class="toc-number">2.</span> <span class="toc-text">方案2: Brute Force（暴力解法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案3-Dynamic-Programming（动态规划）"><span class="toc-number">3.</span> <span class="toc-text">方案3: Dynamic Programming（动态规划）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案4-Expand-Around-Center（中心扩展法）"><span class="toc-number">4.</span> <span class="toc-text">方案4: Expand Around Center（中心扩展法）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方案5-Manacher’s-Algorithm（马拉车算法）"><span class="toc-number">5.</span> <span class="toc-text">方案5: Manacher’s Algorithm（马拉车算法）</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+
+  
+    <div id="gitalk-container" style="padding: 0 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '1c92f03bc20099211872',
+  clientSecret: '5c5b458be40fd177ac8592700e296b1465d86f36',
+  repo: 'lalalei21.github.io',
+  owner: 'lalalei21',
+  admin: 'lalalei21',
+  id: 'Fri Apr 19 2019 13:04:58 GMT+0800',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
+  
 
 
           </div>
@@ -421,8 +497,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

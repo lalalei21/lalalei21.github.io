@@ -171,38 +171,36 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-5-LCS-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-14-LCP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/19/5-LCS-md/">Longest Palindromic Substring (最长回文子串)</a>
+      <a class="article-title" href="/2019/04/23/14-LCP/">Longest Common Prefix（最长公共前缀）</a>
     </h1>
   
 
         <!--显示阅读次数-->
         
         
-        <a href="/2019/04/19/5-LCS-md/" class="archive-article-date">
-  	<time datetime="2019-04-19T05:04:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
+        <a href="/2019/04/23/14-LCP/" class="archive-article-date">
+  	<time datetime="2019-04-23T02:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Description:</strong><br>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. <a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">Do it now!</a></p>
-<h3 id="方案1-Longest-Common-Substring（类似于求最长公共子串问题）"><a href="#方案1-Longest-Common-Substring（类似于求最长公共子串问题）" class="headerlink" title="方案1: Longest Common Substring（类似于求最长公共子串问题）"></a>方案1: Longest Common Substring（类似于求最长公共子串问题）</h3><ul>
-<li><a href="https://www.kancloud.cn/digest/pieces-algorithm/163624" target="_blank" rel="noopener">最长公共子串参考文档</a></li>
-<li>想法：S‘为S的转置，求S和S’的最长公共子串<blockquote>
-<p>例子：S = “c<strong>aba</strong>“, S’= “<strong>aba</strong>c”.  -&gt; SS = “aba”</p>
-</blockquote>
+        <p><strong>Description:</strong><br>Write a function to find the longest common prefix string amongst an array of strings.<br>If there is no common prefix, return an empty string “”. <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank" rel="noopener">Do it now!</a></p>
+<h3 id="方法1：Vertical-scanning（垂直扫描）"><a href="#方法1：Vertical-scanning（垂直扫描）" class="headerlink" title="方法1：Vertical scanning（垂直扫描）"></a>方法1：Vertical scanning（垂直扫描）</h3><ul>
+<li>思想：同一列从上往下比较。</li>
+<li>实现代码：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs[<span class="number">0</span>].length(); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(String s : strs) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= s.length() || s.charAt(i) != strs[<span class="number">0</span>].charAt(i)) </span><br><span class="line">                <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> strs[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
         
-          <a class="article-more-a" href="/2019/04/19/5-LCS-md/#more">more >></a>
+          <a class="article-more-a" href="/2019/04/23/14-LCP/#more">more >></a>
         
       
 
@@ -230,7 +228,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/19/5-LCS-md/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/23/14-LCP/">展开全文 >></a>
         </p>
       
 
@@ -260,21 +258,110 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-yilia-theme-md" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-5-LCS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/12/yilia-theme-md/">Hexo 主题 yilia 优化</a>
+      <a class="article-title" href="/2019/04/19/5-LCS/">Longest Palindromic Substring (最长回文子串)</a>
     </h1>
   
 
         <!--显示阅读次数-->
         
         
-        <a href="/2019/04/12/yilia-theme-md/" class="archive-article-date">
+        <a href="/2019/04/19/5-LCS/" class="archive-article-date">
+  	<time datetime="2019-04-19T05:04:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Description:</strong><br>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. <a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">Do it now!</a></p>
+<h3 id="方案1-Longest-Common-Substring（类似于求最长公共子串问题）"><a href="#方案1-Longest-Common-Substring（类似于求最长公共子串问题）" class="headerlink" title="方案1: Longest Common Substring（类似于求最长公共子串问题）"></a>方案1: Longest Common Substring（类似于求最长公共子串问题）</h3><ul>
+<li><a href="https://www.kancloud.cn/digest/pieces-algorithm/163624" target="_blank" rel="noopener">最长公共子串参考文档</a></li>
+<li>想法：S‘为S的转置，求S和S’的最长公共子串<blockquote>
+<p>例子：S = “c<strong>aba</strong>“, S’= “<strong>aba</strong>c”.  -&gt; SS = “aba”</p>
+</blockquote>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/04/19/5-LCS/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/19/5-LCS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-yilia-theme" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/12/yilia-theme/">Hexo 主题 yilia 优化</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/04/12/yilia-theme/" class="archive-article-date">
   	<time datetime="2019-04-12T03:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
 </a>
         
@@ -289,7 +376,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
         
-          <a class="article-more-a" href="/2019/04/12/yilia-theme-md/#more">more >></a>
+          <a class="article-more-a" href="/2019/04/12/yilia-theme/#more">more >></a>
         
       
 
@@ -313,7 +400,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/12/yilia-theme-md/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/12/yilia-theme/">展开全文 >></a>
         </p>
       
 
