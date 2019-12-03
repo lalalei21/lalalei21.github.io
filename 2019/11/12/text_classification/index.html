@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lalalei21.github.io">
-  <title>使用 Hexo 搭建 Github 博客 | Lalalei&#39;s blog</title>
+  <title>文本分类论文（Text Classification） | Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="##文本分类论文总结 参考链接：https://paperswithcode.com/task/text-classification    序号 论文标题 发表机构 简单描述 代码 备注     0 Text Classification Algorithms: A Survey  文本分类综述 GitHub 1233467   1 Convolutional Neural Networks f">
+<meta name="keywords" content="NLP,text classification">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Hexo 搭建 Github 博客">
-<meta property="og:url" content="https://lalalei21.github.io/2019/04/11/hexo/index.html">
+<meta property="og:title" content="文本分类论文（Text Classification）">
+<meta property="og:url" content="https://lalalei21.github.io/2019/11/12/text_classification/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
-<meta property="og:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
+<meta property="og:description" content="##文本分类论文总结 参考链接：https://paperswithcode.com/task/text-classification    序号 论文标题 发表机构 简单描述 代码 备注     0 Text Classification Algorithms: A Survey  文本分类综述 GitHub 1233467   1 Convolutional Neural Networks f">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-15T04:34:56.841Z">
+<meta property="og:updated_time" content="2019-12-03T06:17:47.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Hexo 搭建 Github 博客">
-<meta name="twitter:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
+<meta name="twitter:title" content="文本分类论文（Text Classification）">
+<meta name="twitter:description" content="##文本分类论文总结 参考链接：https://paperswithcode.com/task/text-classification    序号 论文标题 发表机构 简单描述 代码 备注     0 Text Classification Algorithms: A Survey  文本分类综述 GitHub 1233467   1 Convolutional Neural Networks f">
   
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
@@ -174,14 +174,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-text_classification" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用 Hexo 搭建 Github 博客
+      文本分类论文（Text Classification）
     </h1>
   
 
@@ -196,82 +196,403 @@ var _hmt = _hmt || [];
           </a>
         
         
-        <a href="/2019/04/11/hexo/" class="archive-article-date">
-  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
+        <a href="/2019/11/12/text_classification/" class="archive-article-date">
+  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>看着大家都在写博客，我也终于忍不住了。<br>这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。<br>也是告诉自己不忘初心，持之以恒！</p>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h3><ul>
-<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>，<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node.js</a>，和<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo</a></li>
-<li>验证各安装版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
+        <p>##文本分类论文总结</p>
+<p>参考链接：<a href="https://paperswithcode.com/task/text-classification" target="_blank" rel="noopener">https://paperswithcode.com/task/text-classification</a></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>论文标题</th>
+<th>发表机构</th>
+<th>简单描述</th>
+<th>代码</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Text Classification Algorithms: A Survey</strong></td>
+<td></td>
+<td>文本分类综述</td>
+<td><a href="https://github.com/kk7nc/Text_Classification" target="_blank" rel="noopener">GitHub</a></td>
+<td>1233467</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Convolutional Neural Networks for Sentence Classification</td>
+<td>ACL 2014</td>
+<td>TextCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>A Convolutional Neural Network for Modelling Sentences</td>
+<td>ACL 2014</td>
+<td>DCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Recurrent convolutional neural networks for text classification</td>
+<td>AAAI 2015</td>
+<td>RCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hierarchical Attention Networks for Document Classification</td>
+<td>NAACL 2016</td>
+<td>HAN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Recurrent Neural Network for Text Classification with Multi-Task Learning</td>
+<td>IJCAI 2016</td>
+<td>TextRNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Deep Pyramid Convolutional Neural Networks for Text Categorization</td>
+<td>ACL 2017</td>
+<td>DPCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Very deep convolutional networks for text classification</td>
+<td>EACL 2017</td>
+<td>VDCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bag of Tricks for Efficient Text Classification</td>
+<td>EACL 2017</td>
+<td>FastText</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>A Structured Self-Attentive Sentence Embedding</td>
+<td>ICLR 2017</td>
+<td>Self-Attention</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Joint embedding of words and labels for text classification</td>
+<td>ACL 2018</td>
+<td>LEAM</td>
+<td><a href="https://github.com/guoyinwang/LEAM" target="_blank" rel="noopener">tensorflow</a></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Baseline Needs More Love-On Simple Word-Embedding-Based Models and Associated Pooling Mechanisms</td>
+<td>ACL 2018</td>
+<td>SWEM</td>
+<td><a href="https://github.com/dinghanshen/SWEM" target="_blank" rel="noopener">tensorflow</a></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sequence Generation Model for Multi-Label Classification</td>
+<td>COLING 2018</td>
+<td>SGM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Investigating Capsule Networks with Dynamic Routing for Text Classification</td>
+<td>EMNLP 2018</td>
+<td>Capsule</td>
+<td></td>
+<td><a href="https://zhuanlan.zhihu.com/p/33955995" target="_blank" rel="noopener">理解胶囊网络</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Universal Language Model Fine-tuning for Text Classification</td>
+<td>ACL 2018</td>
+<td>ULMFiT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Graph Convolutional Networks for Text Classification</td>
+<td>AAAI 2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Adaptive Convolution for Text Classification</td>
+<td>NAACL  2019</td>
+<td>自适应卷积，根据不同输入（上一个卷积块的输出）动态生成filter。提出hash genetation。</td>
+<td><a href="https://www.aclweb.org/anthology/attachments/N19-1256.Software.zip" target="_blank" rel="noopener">pytorch</a></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Neural Attentive Bag-of-Entities Model for Text Classification</td>
+<td></td>
+<td>利用实体信息</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Topic Memory Networks for Short Text Classification</td>
+<td>EMNLP  2018</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Simplifying Graph Convolutional Networks</td>
+<td>ICML 2019</td>
+<td>GCN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Sentiment Classification using Document Embeddings trained with Cosine Similarity</td>
+<td>ACL 2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Improved neural network-based multi-label classification with better initialization leveraging label co- occurrence</td>
+<td>NAACL 2016</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Compositional coding capsule network with k-means routing for text classification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Large-scale Multi-label Text Classification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>##专利分类论文总结</p>
+<p>参考链接：<a href="http://kns.cnki.net/kns/brief/Default_Result.aspx" target="_blank" rel="noopener">知网</a>、</p>
+<table>
+<thead>
+<tr>
+<th>论文标题</th>
+<th>作者</th>
+<th>时间</th>
+<th>来源</th>
+<th>简单描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于深度学习的专利文本分析方法研究</td>
+<td>王英瑜</td>
+<td>2019</td>
+<td>北京邮电大学</td>
+<td>topic model + cnn/rcnn</td>
+<td></td>
+</tr>
+<tr>
+<td>中文专利的自动分类</td>
+<td>牛世雄</td>
+<td>2017</td>
+<td>大连理工</td>
+<td>tf-idf特征提取，词向量+空间向量/词袋模型的文本表示，重点在于提出了新的文本表示方法</td>
+<td></td>
+</tr>
+<tr>
+<td>基于深度学习理论与方法的中文专利文本自动分类研究</td>
+<td>马双刚</td>
+<td>2016</td>
+<td>江苏大学</td>
+<td>分词+DAE自动编码器特征提取+SVM分类器</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>##论文简述</p>
+<h4 id="Text-Classification-Algorithms-A-Survey"><a href="#Text-Classification-Algorithms-A-Survey" class="headerlink" title="Text Classification Algorithms: A Survey"></a>Text Classification Algorithms: A Survey</h4><p>大多数文本分类和文档分类系统可以分解为以下四个阶段：特征提取、降维、分类器选择和评估。</p>
+<p>文本分类分为4个级别：文档级别、段落级别、句子级别、子句级别（算法获得句子内的子表达式的相关类别）</p>
+<ol>
+<li><p><strong>Text Preprocessing</strong> 数据预处理：消除噪音</p>
+<p>分词、去除停用词、俚语和缩略词、关键标点符号和特殊字符、拼写检查、Stemming 词干提取等</p>
 </li>
-</ul>
-<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3><a id="more"></a>
+<li><p><strong>Feature Extraction </strong>特征抽取：信息特征化</p>
 <ul>
-<li><p>安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建所需要的文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt; </span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行下列命令，可以查看在本地预览：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g   <span class="comment"># 生成静态页面</span></span><br><span class="line">$ hexo s  <span class="comment"># 启动本地 blog 服务器</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>打开浏览器，在地址栏输入 <u>localhost:4000</u>，就可以查看本地博客了</p>
-<h3 id="3-同步-Hexo-到-Github"><a href="#3-同步-Hexo-到-Github" class="headerlink" title="3. 同步 Hexo 到 Github"></a>3. 同步 Hexo 到 Github</h3><ul>
-<li>新建 Github 项目，命名为 XXX.github.io，XXX 为自己的GitHub 用户名。</li>
-<li><p>打开本地文件夹内的 <code>_config.yml</code> 配置文件，进行如下修改：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/XXX/XXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git –save  <span class="comment"># 安装 hexo-deployer-git</span></span><br><span class="line">$ hexo g  <span class="comment"># 本地生成静态文件</span></span><br><span class="line">$ hexo d  <span class="comment"># 将本地静态文件推送至Github</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>此时，打开浏览器，访问 <a href="http://XXX.github.io" target="_blank" rel="noopener">http://XXX.github.io</a></p>
-<h3 id="4-添加-ssh-key-到-GitHub"><a href="#4-添加-ssh-key-到-GitHub" class="headerlink" title="4. 添加 ssh key 到 GitHub"></a>4. 添加 ssh key 到 GitHub</h3><ul>
-<li><p>检查 ssh key 是否存在，如果存在可以跳过下一步：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成新的 ssh key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>默认会在相应路径下（<code>~/.ssh/id_rsa.pub</code>）生成<code>id_rsa</code>私钥文件和<code>id_rsa.pub</code>公钥文件，私钥不要公开或者上传，公钥可以上传至github进行验证。</p>
+<li><p><strong>Weighted word</strong> 加权词：</p>
 <ul>
-<li>将ssh key添加至 Github</li>
-</ul>
-<p>用终端打开 <code>id_rsa.pub</code>，复制内容，进入 github -&gt;settings -&gt;ssh and gpg keys -&gt;new ssh key 粘贴。</p>
-<h3 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h3><ul>
-<li><p>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo</a> 官网上选择感兴趣的主题，将主题项目拷贝到 themes 文件夹下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<li><p><strong>TF/Bag of Words (BoW)</strong>：最常用的，词袋，文本的主体被认为是一袋单词，单词列表按照个数被创建。忽略了语法和顺序，但是利用了计数特征。容易导致一些特别常用的词在文本表示中占主要地位。使用one-hot编码，由于词汇量可能达到数百万，导致矩阵十分稀疏。</p>
 </li>
-<li><p>修改 <code>_config.yml</code>，将主题设置为 yilia</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+<li><p><strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>：tf 改进了召回率，idf 提高了准确率。克服了文档中常见术语的限制，但是无法考虑词之间的相似性。</p>
 </li>
 </ul>
-<p>&nbsp;</p>
-<h2 id="问题一：多终端同步-Hexo"><a href="#问题一：多终端同步-Hexo" class="headerlink" title="问题一：多终端同步 Hexo"></a>问题一：多终端同步 Hexo</h2><ul>
-<li>hexo 的原理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  <span class="comment"># 清理你的项目缓存</span></span><br><span class="line">$ hexo g  <span class="comment"># 将你刚刚编写的md编译为浏览器可以识别的html</span></span><br><span class="line">$ hexo d  <span class="comment"># 发布到远程仓库</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<p><code>hexo d</code>是发布到<code>_config.yml</code>中配置的<code>branch</code>分支上（一般都是<code>master</code>主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。</p>
+<li><p><strong>Word embedding</strong> 词嵌入:</p>
 <ul>
-<li>开始<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改的文件加入 git 仓库中</span></span><br><span class="line">$ git add <span class="built_in">source</span> </span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建 hexo 分支</span></span><br><span class="line">$ git branch hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 hexo 分支</span></span><br><span class="line">$ git checkout hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地与 Github 项目对接</span></span><br><span class="line">$ git remote add origin https://github.com/yourname/yourname.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># push 到 Github 项目的 hexo 分支上</span></span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
+<li><strong>Word2Vec</strong>：CBOW-预测给定上下文的单词、Skip-gram model-预测给定单词的上下文，保持句子的句法和语义信息。缺点是没有充分利用语料信息。</li>
+<li><strong><a href="http://www.fanyeong.com/2018/02/19/glove-in-detail/#comments" target="_blank" rel="noopener">Global Vectors</a> (<a href="https://blog.csdn.net/mr_tyting/article/details/80180780" target="_blank" rel="noopener">GloVe</a>)</strong>：与word2vec相似。但是基于全局词频统计的词表征工具，它把单词表示成一个由实数组成的向量，捕捉到单词间的语义信息，如相似性、类比性，通过对向量的计算，如欧几里得距离和余弦相似度，可以计算两个单词的相似性。</li>
+<li><strong>FastText</strong>：类似于CBOW，两种模型都是基于Hierarchical Softmax，但引入了N-gram信息。适合大型数据+高效的训练速度，支持多语言表达，专注于文本分类。</li>
+<li><strong>Context2vec</strong>：从双向语言模型学习词向量。<a href="https://zhuanlan.zhihu.com/p/63115885" target="_blank" rel="noopener"><strong>ELMo</strong></a>，相对于<strong>GPT</strong>和<strong>Bert</strong>，lstm特征抽取能力弱于transformer，双向拼接融合比一体化融合弱。</li>
+</ul>
 </li>
 </ul>
-<p>至此，hexo主站程序上传到hexo分支了，发布文章时，正常流程写md，<code>hexo clean</code>，<code>hexo g -d</code>就可以啦~</p>
+</li>
+<li><p><strong>Dimensionality Reduction </strong> 降维：</p>
 <ul>
-<li><p>另外一个终端更新</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将Github中hexo分支clone到本地</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/XXX/XXX.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># cheackout 远程代码到本地hexo分支</span></span><br><span class="line">$ git checkout -b hexo origin/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span></span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>每次切换终端时，记得先执行 git pull origin hexo 将本地与远程同步哦～<br>&nbsp;</p>
-<h2 id="问题二：新换-theme-无法同步远程"><a href="#问题二：新换-theme-无法同步远程" class="headerlink" title="问题二：新换 theme 无法同步远程"></a>问题二：新换 theme 无法同步远程</h2></li>
+<li><strong>Component Analysis</strong>：成分分析<ul>
+<li><strong><a href="https://zhuanlan.zhihu.com/p/32412043" target="_blank" rel="noopener">PCA</a></strong>：主成分分析，最重要的降维方法之一。PCA作为降噪算法也是一个有价值的工具，可以帮助避免过拟合问题。</li>
+<li><strong><a href>ICA</a></strong>：独立成分分析</li>
+<li><strong>LDA</strong>：</li>
+<li><strong>NMF</strong>：</li>
 </ul>
-<p>刚开始我的主题是 next，后来嫌弃它太单调了，就换成了现在的主题，但是发现 push 不上去了，于是开始各种 Google。<br>终于找到了可靠的解决方案。<a href="https://pangjunpeng.com/2018/03/22/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E8%BF%99%E5%87%A0%E5%A4%A9%E6%90%AD%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A4%9A%E7%BB%88%E7%AB%AF%E6%9B%B4%E6%96%B0hexo%EF%BC%8Cthems%E4%B8%BB%E9%A2%98%E6%8F%90%E4%BA%A4%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%AD%89/" target="_blank" rel="noopener">原文链接点这里</a><br>由于 themes 中 yilia 是 clone 的，所以不在我的版本库中，自然也就 push 不上去。<br>需要删除 .git 文件夹，重新 <code>add commit push</code>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -rf --cached themes/yilia</span><br><span class="line">$ git add themes/yilia/*</span><br><span class="line">$ git commit</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-<p>在此感谢提供各种解决方法的博主们～<br>出现的问题其实还有一些，但是 Google 就够了，以后继续加油吧！</p>
+</li>
+<li><strong>Random Projection</strong>：</li>
+<li><p><strong>Autoencoder</strong>：</p>
+<ul>
+<li>CNN</li>
+<li>RNN：</li>
+</ul>
+</li>
+<li><p><strong>T-distributed Stochastic Neighbor Embedding (t-SNE)</strong>：</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Classification Techniques</strong> 分类器：</p>
+<ul>
+<li><p><strong>Rocchio Classification</strong>：</p>
+</li>
+<li><p><strong>Boosting / Bagging</strong>：投票分类技术。Boosting，弱学习算法</p>
+</li>
+<li><p><strong>Bagging</strong>：</p>
+</li>
+<li><p><strong>Logistic Regression</strong>：</p>
+</li>
+<li><p><strong>Naïve Bayes</strong>：</p>
+</li>
+<li><p><strong>K-Nearest Neighbor (KNN)</strong>：</p>
+</li>
+<li><p><strong>Support Vector Machine (SVM)</strong>：</p>
+</li>
+<li><p><strong>Decision Tree</strong>：</p>
+</li>
+<li><p><strong>Random Forest</strong>：</p>
+</li>
+<li><p><strong>Conditional Random Field (CRF)</strong>：</p>
+</li>
+<li><p><strong>Deep Learning</strong>：</p>
+<p>RNN、CNN、DBN、HAN等，见其论文详解</p>
+</li>
+<li><p><strong>Semi-Supervised Learning</strong>：</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Evaluation</strong> 评价方法：</p>
+</li>
+</ol>
 
       
 
@@ -316,7 +637,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">text classification</a>
         		</li>
       		
 		</ul>
@@ -372,7 +697,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2019/04/11/hexo/" alt="微信分享二维码">
+      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2019/11/12/text_classification/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -386,18 +711,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/04/12/yilia_theme/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo 主题 yilia 优化
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/06/12/linux_learning/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux 学习笔记</div>
+    <a href="/2019/11/12/vscode_vue/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vscode配置和vue环境搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -424,7 +740,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客"><span class="toc-number">1.</span> <span class="toc-text">搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工作"><span class="toc-number">1.1.</span> <span class="toc-text">1. 准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-初始化-Blog"><span class="toc-number">1.2.</span> <span class="toc-text">2. 初始化 Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-同步-Hexo-到-Github"><span class="toc-number">1.3.</span> <span class="toc-text">3. 同步 Hexo 到 Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加-ssh-key-到-GitHub"><span class="toc-number">1.4.</span> <span class="toc-text">4. 添加 ssh key 到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-更换主题"><span class="toc-number">1.5.</span> <span class="toc-text">5. 更换主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一：多终端同步-Hexo"><span class="toc-number">2.</span> <span class="toc-text">问题一：多终端同步 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题二：新换-theme-无法同步远程"><span class="toc-number">3.</span> <span class="toc-text">问题二：新换 theme 无法同步远程</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Text-Classification-Algorithms-A-Survey"><span class="toc-number">1.</span> <span class="toc-text">Text Classification Algorithms: A Survey</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -457,7 +773,7 @@ var gitalk = new Gitalk({
   repo: 'lalalei21.github.io',
   owner: 'lalalei21',
   admin: 'lalalei21',
-  id: 'Thu Apr 11 2019 20:17:11 GMT+0800',      // Ensure uniqueness and length less than 50
+  id: 'Tue Nov 12 2019 14:52:26 GMT+0800',      // Ensure uniqueness and length less than 50
   distractionFreeMode: false  // Facebook-like distraction free mode
 })
 

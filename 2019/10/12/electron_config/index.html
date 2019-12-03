@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lalalei21.github.io">
-  <title>使用 Hexo 搭建 Github 博客 | Lalalei&#39;s blog</title>
+  <title>Electron 用法介绍 | Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="##Electron 使用教程 介绍Electron是GitHub开发的一个开源框架。它允许使用Node.js和Chromium完成桌面GUI应用程序的开发。Electron现已被多个开源Web应用程序用于前端与后端的开发，著名项目包括GitHub的Atom和微软的Visual Studio Code。 官方网站：https://electronjs.org/ 中文教程：https://weish">
+<meta name="keywords" content="config">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Hexo 搭建 Github 博客">
-<meta property="og:url" content="https://lalalei21.github.io/2019/04/11/hexo/index.html">
+<meta property="og:title" content="Electron 用法介绍">
+<meta property="og:url" content="https://lalalei21.github.io/2019/10/12/electron_config/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
-<meta property="og:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
+<meta property="og:description" content="##Electron 使用教程 介绍Electron是GitHub开发的一个开源框架。它允许使用Node.js和Chromium完成桌面GUI应用程序的开发。Electron现已被多个开源Web应用程序用于前端与后端的开发，著名项目包括GitHub的Atom和微软的Visual Studio Code。 官方网站：https://electronjs.org/ 中文教程：https://weish">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-15T04:34:56.841Z">
+<meta property="og:updated_time" content="2019-12-03T06:07:49.985Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Hexo 搭建 Github 博客">
-<meta name="twitter:description" content="看着大家都在写博客，我也终于忍不住了。这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。也是告诉自己不忘初心，持之以恒！ 搭建博客1. 准备工作 安装git，node.js，和hexo 验证各安装版本：123$ node -v$ npm -v$ hexo -v   2. 初始化 Blog">
+<meta name="twitter:title" content="Electron 用法介绍">
+<meta name="twitter:description" content="##Electron 使用教程 介绍Electron是GitHub开发的一个开源框架。它允许使用Node.js和Chromium完成桌面GUI应用程序的开发。Electron现已被多个开源Web应用程序用于前端与后端的开发，著名项目包括GitHub的Atom和微软的Visual Studio Code。 官方网站：https://electronjs.org/ 中文教程：https://weish">
   
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
@@ -174,14 +174,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hexo" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-electron_config" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用 Hexo 搭建 Github 博客
+      Electron 用法介绍
     </h1>
   
 
@@ -196,82 +196,49 @@ var _hmt = _hmt || [];
           </a>
         
         
-        <a href="/2019/04/11/hexo/" class="archive-article-date">
-  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
+        <a href="/2019/10/12/electron_config/" class="archive-article-date">
+  	<time datetime="2019-10-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>看着大家都在写博客，我也终于忍不住了。<br>这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。<br>也是告诉自己不忘初心，持之以恒！</p>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h3><ul>
-<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>，<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node.js</a>，和<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo</a></li>
-<li>验证各安装版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3><a id="more"></a>
+        <p>##Electron 使用教程</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Electron是GitHub开发的一个开源框架。它允许使用Node.js和Chromium完成桌面GUI应用程序的开发。Electron现已被多个开源Web应用程序用于前端与后端的开发，著名项目包括GitHub的Atom和微软的Visual Studio Code。</p>
+<p>官方网站：<a href="https://electronjs.org/" target="_blank" rel="noopener">https://electronjs.org/</a></p>
+<p>中文教程：<a href="https://weishuai.gitbooks.io/electron-/" target="_blank" rel="noopener">https://weishuai.gitbooks.io/electron-/</a></p>
+<a id="more"></a>
+<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>####1. 安装 <code>electron</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局安装</span></span><br><span class="line">$ npm install -g electron</span><br><span class="line">$ npm i -D electron@latest</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装在项目下</span></span><br><span class="line">$ npm install --save-dev electron</span><br></pre></td></tr></table></figure>
+<p>####2. 关于安装慢的问题</p>
 <ul>
-<li><p>安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建所需要的文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt; </span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<li><p>通过<code>npm</code>命令配置</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局设置下载源：</span></span><br><span class="line">$ npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后将electron包下载地址注册位淘宝的镜像:</span></span><br><span class="line">$ npm config <span class="built_in">set</span> ELECTRON_MIRROR https://npm.taobao.org/mirrors/electron/</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>执行下列命令，可以查看在本地预览：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g   <span class="comment"># 生成静态页面</span></span><br><span class="line">$ hexo s  <span class="comment"># 启动本地 blog 服务器</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>打开浏览器，在地址栏输入 <u>localhost:4000</u>，就可以查看本地博客了</p>
-<h3 id="3-同步-Hexo-到-Github"><a href="#3-同步-Hexo-到-Github" class="headerlink" title="3. 同步 Hexo 到 Github"></a>3. 同步 Hexo 到 Github</h3><ul>
-<li>新建 Github 项目，命名为 XXX.github.io，XXX 为自己的GitHub 用户名。</li>
-<li><p>打开本地文件夹内的 <code>_config.yml</code> 配置文件，进行如下修改：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/XXX/XXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git –save  <span class="comment"># 安装 hexo-deployer-git</span></span><br><span class="line">$ hexo g  <span class="comment"># 本地生成静态文件</span></span><br><span class="line">$ hexo d  <span class="comment"># 将本地静态文件推送至Github</span></span><br></pre></td></tr></table></figure>
+<li><p>通过写配置文件</p>
+<p>找到你的个人目录里面的.npmrc文件打开文件写入下面的配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">registry=https://registry.npm.taobao.org/</span><br><span class="line">ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>此时，打开浏览器，访问 <a href="http://XXX.github.io" target="_blank" rel="noopener">http://XXX.github.io</a></p>
-<h3 id="4-添加-ssh-key-到-GitHub"><a href="#4-添加-ssh-key-到-GitHub" class="headerlink" title="4. 添加 ssh key 到 GitHub"></a>4. 添加 ssh key 到 GitHub</h3><ul>
-<li><p>检查 ssh key 是否存在，如果存在可以跳过下一步：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成新的 ssh key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>默认会在相应路径下（<code>~/.ssh/id_rsa.pub</code>）生成<code>id_rsa</code>私钥文件和<code>id_rsa.pub</code>公钥文件，私钥不要公开或者上传，公钥可以上传至github进行验证。</p>
 <ul>
-<li>将ssh key添加至 Github</li>
-</ul>
-<p>用终端打开 <code>id_rsa.pub</code>，复制内容，进入 github -&gt;settings -&gt;ssh and gpg keys -&gt;new ssh key 粘贴。</p>
-<h3 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h3><ul>
-<li><p>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo</a> 官网上选择感兴趣的主题，将主题项目拷贝到 themes 文件夹下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 <code>_config.yml</code>，将主题设置为 yilia</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
+<li><p>通过cnpm安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">$ cnpm install</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>&nbsp;</p>
-<h2 id="问题一：多终端同步-Hexo"><a href="#问题一：多终端同步-Hexo" class="headerlink" title="问题一：多终端同步 Hexo"></a>问题一：多终端同步 Hexo</h2><ul>
-<li>hexo 的原理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  <span class="comment"># 清理你的项目缓存</span></span><br><span class="line">$ hexo g  <span class="comment"># 将你刚刚编写的md编译为浏览器可以识别的html</span></span><br><span class="line">$ hexo d  <span class="comment"># 发布到远程仓库</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><code>hexo d</code>是发布到<code>_config.yml</code>中配置的<code>branch</code>分支上（一般都是<code>master</code>主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。</p>
+<p>####3. 手动搭建一个 <code>electron</code>项目</p>
 <ul>
-<li>开始<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改的文件加入 git 仓库中</span></span><br><span class="line">$ git add <span class="built_in">source</span> </span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建 hexo 分支</span></span><br><span class="line">$ git branch hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 hexo 分支</span></span><br><span class="line">$ git checkout hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地与 Github 项目对接</span></span><br><span class="line">$ git remote add origin https://github.com/yourname/yourname.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># push 到 Github 项目的 hexo 分支上</span></span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
-</li>
+<li>新建一个项目目录，例如: <code>electron-demo</code></li>
+<li>使用<code>npm init</code>生成<code>package.json</code></li>
+<li>在 <code>electron-demo</code> 目录下面新建文件: <code>index.html</code>、<code>main.js</code> `</li>
+<li>在<code>index.html</code> 里面用 <code>css</code> 进行布局(以前怎么写现在还是怎么写)</li>
+<li>在 <code>main.js</code> 中写如下代码：</li>
 </ul>
-<p>至此，hexo主站程序上传到hexo分支了，发布文章时，正常流程写md，<code>hexo clean</code>，<code>hexo g -d</code>就可以啦~</p>
-<ul>
-<li><p>另外一个终端更新</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将Github中hexo分支clone到本地</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/XXX/XXX.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># cheackout 远程代码到本地hexo分支</span></span><br><span class="line">$ git checkout -b hexo origin/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span></span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>每次切换终端时，记得先执行 git pull origin hexo 将本地与远程同步哦～<br>&nbsp;</p>
-<h2 id="问题二：新换-theme-无法同步远程"><a href="#问题二：新换-theme-无法同步远程" class="headerlink" title="问题二：新换 theme 无法同步远程"></a>问题二：新换 theme 无法同步远程</h2></li>
-</ul>
-<p>刚开始我的主题是 next，后来嫌弃它太单调了，就换成了现在的主题，但是发现 push 不上去了，于是开始各种 Google。<br>终于找到了可靠的解决方案。<a href="https://pangjunpeng.com/2018/03/22/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E8%BF%99%E5%87%A0%E5%A4%A9%E6%90%AD%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A4%9A%E7%BB%88%E7%AB%AF%E6%9B%B4%E6%96%B0hexo%EF%BC%8Cthems%E4%B8%BB%E9%A2%98%E6%8F%90%E4%BA%A4%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%AD%89/" target="_blank" rel="noopener">原文链接点这里</a><br>由于 themes 中 yilia 是 clone 的，所以不在我的版本库中，自然也就 push 不上去。<br>需要删除 .git 文件夹，重新 <code>add commit push</code>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -rf --cached themes/yilia</span><br><span class="line">$ git add themes/yilia/*</span><br><span class="line">$ git commit</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-<p>在此感谢提供各种解决方法的博主们～<br>出现的问题其实还有一些，但是 Google 就够了，以后继续加油吧！</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">const electron = require(<span class="string">'electron'</span>); //electron 对象的引用</span><br><span class="line">// 控制应用生命周期的模块。</span><br><span class="line">const &#123;app&#125; = electron;</span><br><span class="line">// 创建原生浏览器窗口的模块。</span><br><span class="line">const &#123;BrowserWindow&#125; = electron;</span><br><span class="line"></span><br><span class="line">// 保持一个对于 window 对象的全局引用，如果你不这样做，</span><br><span class="line">// 当 JavaScript 对象被垃圾回收， window 会被自动地关闭</span><br><span class="line"><span class="built_in">let</span> mainWindow=null;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">createWindow</span></span>() &#123;</span><br><span class="line">  // 创建浏览器窗口。</span><br><span class="line">  mainWindow = new BrowserWindow(&#123;width: 800, height: 600&#125;);</span><br><span class="line"></span><br><span class="line">  // 加载应用的 index.html。</span><br><span class="line">  mainWindow.loadURL(<span class="string">'index.html'</span>);</span><br><span class="line"></span><br><span class="line">  // 启用开发工具。</span><br><span class="line">  // mainWindow.webContents.openDevTools();</span><br><span class="line"></span><br><span class="line">  // 当 window 被关闭，这个事件会被触发。</span><br><span class="line">  mainWindow.on(<span class="string">'closed'</span>, () =&gt; &#123;</span><br><span class="line">    // 取消引用 window 对象，如果你的应用支持多窗口的话，</span><br><span class="line">    // 通常会把多个 window 对象存放在一个数组里面，</span><br><span class="line">    // 与此同时，你应该删除相应的元素。</span><br><span class="line">    mainWindow = null;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Electron 会在初始化后并准备</span><br><span class="line">// 创建浏览器窗口时，调用这个函数。</span><br><span class="line">// 部分 API 在 ready 事件触发后才能使用。</span><br><span class="line">app.on(<span class="string">'ready'</span>, createWindow);</span><br><span class="line"></span><br><span class="line">// 当全部窗口关闭时退出。</span><br><span class="line">app.on(<span class="string">'window-all-closed'</span>, () =&gt; &#123;</span><br><span class="line">  // 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span><br><span class="line">  // 否则绝大部分应用及其菜单栏会保持激活。</span><br><span class="line">  <span class="keyword">if</span> (process.platform !== <span class="string">'darwin'</span>) &#123;</span><br><span class="line">    app.quit();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">'activate'</span>, () =&gt; &#123;</span><br><span class="line">  // 在 macOS 上，当点击 dock 图标并且该应用没有打开的窗口时，</span><br><span class="line">  // 绝大部分应用会重新创建一个窗口。</span><br><span class="line">  <span class="keyword">if</span> (mainWindow === null) &#123;</span><br><span class="line">    createWindow();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 在这文件，你可以续写应用剩下主进程代码。</span><br><span class="line">// 也可以拆分成几个文件，然后用 require 导入。</span><br></pre></td></tr></table></figure>
+<h4 id="4-快速示例"><a href="#4-快速示例" class="headerlink" title="4. 快速示例"></a>4. 快速示例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆示例项目的仓库</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/electron/electron-quick-start</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入这个仓库</span></span><br><span class="line">$ <span class="built_in">cd</span> electron-quick-start</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖并运行</span></span><br><span class="line">$ npm install &amp;&amp; npm start</span><br></pre></td></tr></table></figure>
+<p>####5. 运行</p>
+<p><a href="https://github.com/electron-userland/electron-prebuilt" target="_blank" rel="noopener">electron-prebuilt</a> 是一个 <code>npm</code> 模块，包含所使用的 Electron 预编译版本。 如果你已经用 <code>npm</code> 全局安装了它，你只需要按照如下方式直接运行你的应用：<code>electron .</code></p>
+<p>如果你是局部安装，那么运行<code>./node_modules/.bin/electron .</code></p>
 
       
 
@@ -316,7 +283,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">config</a>
         		</li>
       		
 		</ul>
@@ -372,7 +339,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2019/04/11/hexo/" alt="微信分享二维码">
+      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2019/10/12/electron_config/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -386,18 +353,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/04/12/yilia_theme/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/12/NER/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hexo 主题 yilia 优化
+          领域适应NER论文
         
       </div>
     </a>
   
   
-    <a href="/2018/06/12/linux_learning/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux 学习笔记</div>
+    <a href="/2019/04/23/14-LCP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Longest Common Prefix（最长公共前缀）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -424,7 +391,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#搭建博客"><span class="toc-number">1.</span> <span class="toc-text">搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工作"><span class="toc-number">1.1.</span> <span class="toc-text">1. 准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-初始化-Blog"><span class="toc-number">1.2.</span> <span class="toc-text">2. 初始化 Blog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-同步-Hexo-到-Github"><span class="toc-number">1.3.</span> <span class="toc-text">3. 同步 Hexo 到 Github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-添加-ssh-key-到-GitHub"><span class="toc-number">1.4.</span> <span class="toc-text">4. 添加 ssh key 到 GitHub</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-更换主题"><span class="toc-number">1.5.</span> <span class="toc-text">5. 更换主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一：多终端同步-Hexo"><span class="toc-number">2.</span> <span class="toc-text">问题一：多终端同步 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题二：新换-theme-无法同步远程"><span class="toc-number">3.</span> <span class="toc-text">问题二：新换 theme 无法同步远程</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">2.</span> <span class="toc-text">环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-快速示例"><span class="toc-number">2.1.</span> <span class="toc-text">4. 快速示例</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -457,7 +424,7 @@ var gitalk = new Gitalk({
   repo: 'lalalei21.github.io',
   owner: 'lalalei21',
   admin: 'lalalei21',
-  id: 'Thu Apr 11 2019 20:17:11 GMT+0800',      // Ensure uniqueness and length less than 50
+  id: 'Sat Oct 12 2019 14:52:26 GMT+0800',      // Ensure uniqueness and length less than 50
   distractionFreeMode: false  // Facebook-like distraction free mode
 })
 

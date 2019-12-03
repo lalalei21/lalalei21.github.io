@@ -171,37 +171,82 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-yilia-theme" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-vim_learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/12/yilia-theme/">Hexo 主题 yilia 优化</a>
+      <a class="article-title" href="/2018/06/12/vim_learning/">VIM 学习笔记</a>
     </h1>
   
 
         <!--显示阅读次数-->
         
         
-        <a href="/2019/04/12/yilia-theme/" class="archive-article-date">
-  	<time datetime="2019-04-12T03:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
+        <a href="/2018/06/12/vim_learning/" class="archive-article-date">
+  	<time datetime="2018-06-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>好吧，我承认自己是一个外貌协会。<br>既然倒腾了这个博客，就尽量让自己感到舒服😌。<br>废话不多说了，开始吧。</p>
-<h2 id="1-添加网站浏览量统计"><a href="#1-添加网站浏览量统计" class="headerlink" title="1. 添加网站浏览量统计"></a>1. 添加网站浏览量统计</h2><ul>
-<li>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></li>
-<li>安装脚本（必选），在 <code>themes\yilia\layout_partial\footer.ejs</code> 最后添加：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p><img src="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png" alt="image"></p>
+<h4 id="命令行模式-："><a href="#命令行模式-：" class="headerlink" title="命令行模式($)："></a>命令行模式($)：</h4><ol>
+<li>光标跳转(n+)<blockquote>
+<p>h/j/k/l - 左下右上<br>w/e - 下一单词头/尾<br>0/^/$ - 行首/非零行首/行末<br>[[ / ]] - 文件首/尾</p>
+</blockquote>
 </li>
-</ul>
-        
-          <a class="article-more-a" href="/2019/04/12/yilia-theme/#more">more >></a>
-        
+</ol>
+<ol start="2">
+<li><p>复制</p>
+<blockquote>
+<p>复制到寄存器 - y  粘贴 - p</p>
+</blockquote>
+</li>
+<li><p>删除</p>
+<blockquote>
+<p>单个字符 - x<br>单词含空/不含 - daw/diw<br>光标-下一个单词头/尾 - db/dw<br>行 - dd<br>光标-行尾 - D<br>当前-文件头/尾 - dgg/dG</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="末行模式-："><a href="#末行模式-：" class="headerlink" title="末行模式(:)："></a>末行模式(:)：</h4><ol>
+<li><p>设置行号</p>
+<blockquote>
+<p>set number ,set nu<br>set nonumber</p>
+</blockquote>
+</li>
+<li><p>删除</p>
+<blockquote>
+<p>当前 - d<br>当前行-末尾 - ,$d<br>第n行到末尾 - n,$d<br>开始-当前 - 0,d<br>合并两行/删除换行符 - j</p>
+</blockquote>
+</li>
+</ol>
+<ol start="4">
+<li><p>替换字符串  </p>
+<blockquote>
+<p>此行第一个：s/old/new<br>此行所有：s/old/new/g<br>全文所有：%s/old/new/g<br>所有询问：%s/old/new/gc</p>
+</blockquote>
+</li>
+<li><p>查找  </p>
+<blockquote>
+<p>/ - 定位到下一个匹配的文本<br>? - 定位到前一个匹配的文本<br>n - 向前查找下一个匹配的文本<br>N - 向后查找前一个匹配的文本</p>
+</blockquote>
+</li>
+<li><p>退出</p>
+<blockquote>
+<p>:w - 保存文件但不退出vi<br>:w file - 将修改另外保存到file中，不退出vi<br>:w! - 强制保存，不推出vi<br>:wq - 保存文件并退出vi<br>:wq! - 强制保存文件，并退出vi<br>:q - 不保存文件，退出vi<br>:q! - 不保存文件，强制退出vi<br>:e! - 放弃所有修改，从上次保存文件开始再编辑</p>
+</blockquote>
+</li>
+<li><p>截取转存</p>
+<blockquote>
+<p>1,5 w ~/163.txt </p>
+</blockquote>
+</li>
+</ol>
+<h4 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h4>
       
 
       
@@ -214,7 +259,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">learning</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vim</a>
         		</li>
       		
 		</ul>
@@ -224,7 +273,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/12/yilia-theme/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/06/12/vim_learning/">展开全文 >></a>
         </p>
       
 
@@ -254,38 +303,56 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-sublime3_config" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/11/hexo/">使用 Hexo 搭建 Github 博客</a>
+      <a class="article-title" href="/2017/05/04/sublime3_config/">Sublime3 配置</a>
     </h1>
   
 
         <!--显示阅读次数-->
         
         
-        <a href="/2019/04/11/hexo/" class="archive-article-date">
-  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
+        <a href="/2017/05/04/sublime3_config/" class="archive-article-date">
+  	<time datetime="2017-05-04T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>看着大家都在写博客，我也终于忍不住了。<br>这是我的第一篇博文，记录了使用hexo+github搭建博客的方法，以及过程中遇到的问题和解决方案。<br>也是告诉自己不忘初心，持之以恒！</p>
-<h2 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h2><h3 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1. 准备工作"></a>1. 准备工作</h3><ul>
-<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git</a>，<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node.js</a>，和<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">hexo</a></li>
-<li>验证各安装版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
+        <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><ul>
+<li><p>ubuntu: </p>
+<ol>
+<li>添加sublime text 3的仓库：sudo add-apt-repository ppa:webupd8team/sublime-text-3</li>
+<li>更新软件库：sudo apt-get update</li>
+<li>安装Sublime Text 3:sudo apt-get install sublime-text-installer</li>
+</ol>
 </li>
+<li><p>windowns:官网下载安装即可。</p>
+</li>
+<li>3126 注册码</li>
 </ul>
-<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3>
-        
-          <a class="article-more-a" href="/2019/04/11/hexo/#more">more >></a>
-        
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">Michael Barnes</span><br><span class="line">Single User License</span><br><span class="line">EA7E-821385</span><br><span class="line">8A353C41 872A0D5C DF9B2950 AFF6F667</span><br><span class="line">C458EA6D 8EA3C286 98D1D650 131A97AB</span><br><span class="line">AA919AEC EF20E143 B361B1E7 4C8B7F04</span><br><span class="line">B085E65E 2F5F5360 8489D422 FB8FC1AA</span><br><span class="line">93F6323C FD7F7544 3F39C318 D95E6480</span><br><span class="line">FCCC7561 8A4A1741 68FA4223 ADCEDE07</span><br><span class="line">200C25BE DBBC4855 C4CFB774 C5EC138C</span><br><span class="line">0FEC1CEF D9DCECEC D3A5DAD1 01316C36</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装内部插件"><a href="#2-安装内部插件" class="headerlink" title="2.安装内部插件"></a>2.安装内部插件</h2><blockquote>
+<p>使用Package Control组件安装：   </p>
+<ol>
+<li>按Ctrl+`调出console，粘贴以下代码到底部命令行并回车：   <figure class="highlight plain"><figcaption><span>urllib.request,os; pf </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt;</span><br><span class="line">&gt; 2. 在Perferences-&gt;package settings中看到package control这一项，则安装成功。</span><br><span class="line">&gt; 3. Ctrl+Shift+P调出命令面板</span><br><span class="line"></span><br><span class="line">### 2.1 Emmet : 一种快速编写html/css的方法</span><br><span class="line"></span><br><span class="line">- 注意：安装Emmet的同时，也会自动安装其依赖PyV8 binary库。</span><br><span class="line">- 安装不了则手动[下载1](https://github.com/emmetio/pyv8-binaries#readme)/[下载2](http://www.qingzz.cn/sublimeText_Emmet_PyV8)，下载完成后解压，文件夹重命名为linux64-p3，将文件夹拷贝到 Installed Packages/PyV8/，文件夹里面有两个文件 _PyV8.cpython-33m.so 和 PyV8.py。</span><br><span class="line">- [使用见官网](https://docs.emmet.io/cheat-sheet/)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 2.2 Theme - Spacegray</span><br><span class="line">- [使用见官网](http://kkga.github.io/spacegray/)</span><br><span class="line">- 参考配置</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<p>{<br>    “color_scheme”: “Packages/Theme - Spacegray/base16-ocean.dark.tmTheme”,<br>    “highlight_line”: true,<br>    “line_padding_bottom”: 5,<br>    “line_padding_top”: 5,<br>    “spacegray_sidebar_font_xlarge”: true,<br>    “spacegray_sidebar_tree_large”: true,<br>    “spacegray_tabs_auto_width”: true,<br>    “spacegray_tabs_font_large”: true,<br>    “spacegray_tabs_xlarge”: true,<br>    “theme”: “Spacegray.sublime-theme”,<br>    “spacegray_fileicons”: true,<br>    “enable_tab_scrolling”: false,<br>    “font_face”: “Consolas”,<br>    “font_size”:11,<br>}<br><code>`</code></p>
+<h3 id="2-3-BracketHighlighter-：括号配对"><a href="#2-3-BracketHighlighter-：括号配对" class="headerlink" title="2.3 BracketHighlighter** ：括号配对"></a>2.3 BracketHighlighter** ：括号配对</h3><ul>
+<li><a href="http://facelessuser.github.io/BracketHighlighter/" target="_blank" rel="noopener">使用见官网</a></li>
+<li>Pregerence &gt; Package Settings &gt; BracketHighlighter &gt; Bracket Settings - User</li>
+<li>{} － curly  () － round  [] － square &lt;&gt; － angle “” ‘’ － quote</li>
+<li>style: solid、underline、outline、highlight</li>
+</ul>
+<h3 id="2-4-sublimeCodeIntel-：-代码自动补全"><a href="#2-4-sublimeCodeIntel-：-代码自动补全" class="headerlink" title="2.4 sublimeCodeIntel ： 代码自动补全"></a>2.4 sublimeCodeIntel ： 代码自动补全</h3>
       
 
       
@@ -298,7 +365,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">config</a>
         		</li>
       		
 		</ul>
@@ -308,7 +375,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/11/hexo/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/05/04/sublime3_config/">展开全文 >></a>
         </p>
       
 
@@ -549,11 +616,39 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
+                <a href="javascript:void(0)" class="js-tag color4">NLP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NER</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">config</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">text classification</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vim</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
               </li>
             
             <div class="clearfix"></div>
