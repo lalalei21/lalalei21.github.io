@@ -4,7 +4,7 @@ date: 2019-04-19 13:04:58
 tags: [leetcode, java]
 comments: true
 toc: true
-reward: true
+reward: false
 ---
 **Description:**
 Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. [Do it now!](https://leetcode.com/problems/longest-palindromic-substring/)
