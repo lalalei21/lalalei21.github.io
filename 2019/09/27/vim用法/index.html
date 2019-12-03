@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lalalei21.github.io">
-  <title>Archives: 2019 | Lalalei&#39;s blog</title>
+  <title>Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="命令行模式($)： 光标跳转(n+) h/j/k/l - 左下右上w/e - 下一单词头/尾0/^/$ - 行首/非零行首/行末[[ / ]] - 文件首/尾     复制  复制到寄存器 - y  粘贴 - p   删除  单个字符 - x单词含空/不含 - daw/diw光标-下一个单词头/尾 - db/dw行 - dd光标-行尾 - D当前-文件头/尾 - dgg/dG    末行模式(:">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Lalalei&#39;s blog">
-<meta property="og:url" content="https://lalalei21.github.io/archives/2019/index.html">
+<meta property="og:url" content="https://lalalei21.github.io/2019/09/27/vim用法/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
+<meta property="og:description" content="命令行模式($)： 光标跳转(n+) h/j/k/l - 左下右上w/e - 下一单词头/尾0/^/$ - 行首/非零行首/行末[[ / ]] - 文件首/尾     复制  复制到寄存器 - y  粘贴 - p   删除  单个字符 - x单词含空/不含 - daw/diw光标-下一个单词头/尾 - db/dw行 - dd光标-行尾 - D当前-文件头/尾 - dgg/dG    末行模式(:">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png">
+<meta property="og:updated_time" content="2019-09-27T09:19:12.350Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lalalei&#39;s blog">
+<meta name="twitter:description" content="命令行模式($)： 光标跳转(n+) h/j/k/l - 左下右上w/e - 下一单词头/尾0/^/$ - 行首/非零行首/行末[[ / ]] - 文件首/尾     复制  复制到寄存器 - y  粘贴 - p   删除  单个字符 - x单词含空/不含 - daw/diw光标-下一个单词头/尾 - db/dw行 - dd光标-行尾 - D当前-文件头/尾 - dgg/dG    末行模式(:">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png">
   
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
@@ -169,277 +175,200 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vim用法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png" alt="image"></p>
+<h4 id="命令行模式-："><a href="#命令行模式-：" class="headerlink" title="命令行模式($)："></a>命令行模式($)：</h4><ol>
+<li>光标跳转(n+)<blockquote>
+<p>h/j/k/l - 左下右上<br>w/e - 下一单词头/尾<br>0/^/$ - 行首/非零行首/行末<br>[[ / ]] - 文件首/尾</p>
+</blockquote>
+</li>
+</ol>
+<ol start="2">
+<li><p>复制</p>
+<blockquote>
+<p>复制到寄存器 - y  粘贴 - p</p>
+</blockquote>
+</li>
+<li><p>删除</p>
+<blockquote>
+<p>单个字符 - x<br>单词含空/不含 - daw/diw<br>光标-下一个单词头/尾 - db/dw<br>行 - dd<br>光标-行尾 - D<br>当前-文件头/尾 - dgg/dG</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="末行模式-："><a href="#末行模式-：" class="headerlink" title="末行模式(:)："></a>末行模式(:)：</h4><ol>
+<li><p>设置行号</p>
+<blockquote>
+<p>set number ,set nu<br>set nonumber</p>
+</blockquote>
+</li>
+<li><p>删除</p>
+<blockquote>
+<p>当前 - d<br>当前行-末尾 - ,$d<br>第n行到末尾 - n,$d<br>开始-当前 - 0,d<br>合并两行/删除换行符 - j</p>
+</blockquote>
+</li>
+</ol>
+<ol start="4">
+<li><p>替换字符串  </p>
+<blockquote>
+<p>此行第一个：s/old/new<br>此行所有：s/old/new/g<br>全文所有：%s/old/new/g<br>所有询问：%s/old/new/gc</p>
+</blockquote>
+</li>
+<li><p>查找  </p>
+<blockquote>
+<p>/ - 定位到下一个匹配的文本<br>? - 定位到前一个匹配的文本<br>n - 向前查找下一个匹配的文本<br>N - 向后查找前一个匹配的文本</p>
+</blockquote>
+</li>
+<li><p>退出</p>
+<blockquote>
+<p>:w - 保存文件但不退出vi<br>:w file - 将修改另外保存到file中，不退出vi<br>:w! - 强制保存，不推出vi<br>:wq - 保存文件并退出vi<br>:wq! - 强制保存文件，并退出vi<br>:q - 不保存文件，退出vi<br>:q! - 不保存文件，强制退出vi<br>:e! - 放弃所有修改，从上次保存文件开始再编辑</p>
+</blockquote>
+</li>
+<li><p>截取转存</p>
+<blockquote>
+<p>1,5 w ~/163.txt </p>
+</blockquote>
+</li>
+</ol>
+<h4 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/01/NER/" class="archive-article-date">
-  	<time datetime="2019-11-01T08:10:28.479Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2019/09/27/vim用法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/23/多级分类论文/" class="archive-article-date">
-  	<time datetime="2019-10-23T12:57:28.055Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/28/electron 使用教程/" class="archive-article-date">
-  	<time datetime="2019-09-28T05:37:19.528Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-28</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2019/09/27/sublime3配置/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/27/vscode配置 和 vue环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/27/文本分类论文/" class="archive-article-date">
-  	<time datetime="2019-09-27T09:20:46.402Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/27/sublime3配置/" class="archive-article-date">
-  	<time datetime="2019-09-27T09:17:15.874Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/27/vim用法/" class="archive-article-date">
-  	<time datetime="2019-09-27T09:16:37.404Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/27/vscode配置 和 vue环境搭建/" class="archive-article-date">
-  	<time datetime="2019-09-27T09:15:30.520Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/27/Linux 学习笔记/" class="archive-article-date">
-  	<time datetime="2019-09-27T09:04:15.238Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-27</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/23/14-LCP/" class="archive-article-date">
-  	<time datetime="2019-04-23T02:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/23/14-LCP/">Longest Common Prefix（最长公共前缀）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/19/5-LCS/" class="archive-article-date">
-  	<time datetime="2019-04-19T05:04:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/19/5-LCS/">Longest Palindromic Substring (最长回文子串)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+    <div id="gitalk-container" style="padding: 0 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '1c92f03bc20099211872',
+  clientSecret: '5c5b458be40fd177ac8592700e296b1465d86f36',
+  repo: 'lalalei21.github.io',
+  owner: 'lalalei21',
+  admin: 'lalalei21',
+  id: 'Fri Sep 27 2019 17:16:37 GMT+0800',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
   
 
 
@@ -469,8 +398,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
