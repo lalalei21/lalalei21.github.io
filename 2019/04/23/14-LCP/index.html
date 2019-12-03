@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lalalei&#39;s blog">
 <meta property="og:description" content="Description:Write a function to find the longest common prefix string amongst an array of strings.If there is no common prefix, return an empty string “”. Do it now! 方法1：Vertical scanning（垂直扫描） 思想：同一列">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-24T04:14:10.935Z">
+<meta property="og:updated_time" content="2019-12-03T07:46:56.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Longest Common Prefix（最长公共前缀）">
 <meta name="twitter:description" content="Description:Write a function to find the longest common prefix string amongst an array of strings.If there is no common prefix, return an empty string “”. Do it now! 方法1：Vertical scanning（垂直扫描） 思想：同一列">
@@ -185,26 +185,26 @@ var _hmt = _hmt || [];
     </h1>
   
 
-        <!--显示阅读次数-->
-        
-          <br>
+          <!--显示阅读次数-->
+          
+            <!-- <br/>
           <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;cursor: text">
           <span class="icon-sort"></span>
           <span style="color:#f173ac;font-size:14px;display: inline;">
             阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
           </span>
-          </a>
-        
-        
-        <a href="/2019/04/23/14-LCP/" class="archive-article-date">
+          </a> -->
+            
+              
+                <a href="/2019/04/23/14-LCP/" class="archive-article-date">
   	<time datetime="2019-04-23T02:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
 </a>
-        
+                  
       </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Description:</strong><br>Write a function to find the longest common prefix string amongst an array of strings.<br>If there is no common prefix, return an empty string “”. <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank" rel="noopener">Do it now!</a></p>
+        <div class="article-entry" itemprop="articleBody">
+          
+                    <p><strong>Description:</strong><br>Write a function to find the longest common prefix string amongst an array of strings.<br>If there is no common prefix, return an empty string “”. <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank" rel="noopener">Do it now!</a></p>
 <h3 id="方法1：Vertical-scanning（垂直扫描）"><a href="#方法1：Vertical-scanning（垂直扫描）" class="headerlink" title="方法1：Vertical scanning（垂直扫描）"></a>方法1：Vertical scanning（垂直扫描）</h3><ul>
 <li>思想：同一列从上往下比较。</li>
 <li>实现代码：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs[<span class="number">0</span>].length(); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(String s : strs) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= s.length() || s.charAt(i) != strs[<span class="number">0</span>].charAt(i)) </span><br><span class="line">                <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> strs[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -252,44 +252,13 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 
-      
+                      
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖(*ﾟ▽ﾟ*)<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/weixin.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
+                        
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info article-info-index">
+          
+              
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -305,12 +274,12 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-      
+                
 
-      
+                  
 
-      
-        
+                      
+                        
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -360,9 +329,9 @@ var _hmt = _hmt || [];
 </div>
 
 <div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+                          
+                            <div class="clearfix"></div>
+        </div>
   </div>
 </article>
 
@@ -386,8 +355,8 @@ var _hmt = _hmt || [];
   
 </nav>
 
-
-<aside class="wrap-side-operation">
+    
+      <aside class="wrap-side-operation">
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
@@ -417,19 +386,19 @@ var _hmt = _hmt || [];
 </aside>
 
 
+        
+          
 
-  
-  
-  
+                
 
-  
+                      
 
-  
+                            
 
-  
+                                
 
-  
-    <div id="gitalk-container" style="padding: 0 30px;"></div>
+                                      
+                                        <div id="gitalk-container" style="padding: 0 30px;"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
@@ -446,9 +415,8 @@ var gitalk = new Gitalk({
 
 gitalk.render('gitalk-container')
 </script>
-  
-
-
+                                          
+                                            
           </div>
         </div>
       </div>
@@ -574,6 +542,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">NLP</a>
               </li>
              
@@ -603,10 +575,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vim</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
               </li>
             
             <div class="clearfix"></div>
