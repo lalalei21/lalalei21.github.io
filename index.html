@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="https://github.com/lalalei21/lalalei21.github.io">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="dns-prefetch" href="https://lalalei21.github.io">
   <title>Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Lalalei&#39;s blog">
-<meta property="og:url" content="https://github.com/lalalei21/lalalei21.github.io/index.html">
+<meta property="og:url" content="https://lalalei21.github.io/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -21,6 +21,9 @@
   
     <link rel="icon" href="/assets/blogImg/sakura.png">
   
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
   
@@ -31,9 +34,19 @@
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?5e9af22a224aba7ecdee9f432fd0f33c";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 </head>
-
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -57,6 +70,8 @@
 			
 				<li><a href="/">主页</a></li>
 	        
+				<li><a href="/tags/diaries">随笔</a></li>
+	        
 				<li><a href="/photos">相册</a></li>
 	        
 			</ul>
@@ -67,6 +82,8 @@
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
     			
             
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -80,8 +97,6 @@
 					<a class="github" target="_blank" href="https://github.com/lalalei21" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/5709528244/profile" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:sharelei21@163.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -115,6 +130,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -124,20 +141,20 @@
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/5709528244/profile" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-			        
 						<a class="mail" target="_blank" href="mailto:sharelei21@163.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/photos">相册</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/diaries">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/photos">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -154,6 +171,1250 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-text_classification" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/text_classification/">文本分类论文（Text Classification）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/11/12/text_classification/" class="archive-article-date">
+  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##文本分类论文总结</p>
+<p>参考链接：<a href="https://paperswithcode.com/task/text-classification" target="_blank" rel="noopener">https://paperswithcode.com/task/text-classification</a></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>论文标题</th>
+<th>发表机构</th>
+<th>简单描述</th>
+<th>代码</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>Text Classification Algorithms: A Survey</strong></td>
+<td></td>
+<td>文本分类综述</td>
+<td><a href="https://github.com/kk7nc/Text_Classification" target="_blank" rel="noopener">GitHub</a></td>
+<td>1233467</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Convolutional Neural Networks for Sentence Classification</td>
+<td>ACL 2014</td>
+<td>TextCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>A Convolutional Neural Network for Modelling Sentences</td>
+<td>ACL 2014</td>
+<td>DCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Recurrent convolutional neural networks for text classification</td>
+<td>AAAI 2015</td>
+<td>RCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hierarchical Attention Networks for Document Classification</td>
+<td>NAACL 2016</td>
+<td>HAN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Recurrent Neural Network for Text Classification with Multi-Task Learning</td>
+<td>IJCAI 2016</td>
+<td>TextRNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Deep Pyramid Convolutional Neural Networks for Text Categorization</td>
+<td>ACL 2017</td>
+<td>DPCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Very deep convolutional networks for text classification</td>
+<td>EACL 2017</td>
+<td>VDCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bag of Tricks for Efficient Text Classification</td>
+<td>EACL 2017</td>
+<td>FastText</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>A Structured Self-Attentive Sentence Embedding</td>
+<td>ICLR 2017</td>
+<td>Self-Attention</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Joint embedding of words and labels for text classification</td>
+<td>ACL 2018</td>
+<td>LEAM</td>
+<td><a href="https://github.com/guoyinwang/LEAM" target="_blank" rel="noopener">tensorflow</a></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Baseline Needs More Love-On Simple Word-Embedding-Based Models and Associated Pooling Mechanisms</td>
+<td>ACL 2018</td>
+<td>SWEM</td>
+<td><a href="https://github.com/dinghanshen/SWEM" target="_blank" rel="noopener">tensorflow</a></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sequence Generation Model for Multi-Label Classification</td>
+<td>COLING 2018</td>
+<td>SGM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Investigating Capsule Networks with Dynamic Routing for Text Classification</td>
+<td>EMNLP 2018</td>
+<td>Capsule</td>
+<td></td>
+<td><a href="https://zhuanlan.zhihu.com/p/33955995" target="_blank" rel="noopener">理解胶囊网络</a></td>
+</tr>
+<tr>
+<td>13</td>
+<td>Universal Language Model Fine-tuning for Text Classification</td>
+<td>ACL 2018</td>
+<td>ULMFiT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>Graph Convolutional Networks for Text Classification</td>
+<td>AAAI 2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>Adaptive Convolution for Text Classification</td>
+<td>NAACL  2019</td>
+<td>自适应卷积，根据不同输入（上一个卷积块的输出）动态生成filter。提出hash genetation。</td>
+<td><a href="https://www.aclweb.org/anthology/attachments/N19-1256.Software.zip" target="_blank" rel="noopener">pytorch</a></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>Neural Attentive Bag-of-Entities Model for Text Classification</td>
+<td></td>
+<td>利用实体信息</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Topic Memory Networks for Short Text Classification</td>
+<td>EMNLP  2018</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Simplifying Graph Convolutional Networks</td>
+<td>ICML 2019</td>
+<td>GCN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Sentiment Classification using Document Embeddings trained with Cosine Similarity</td>
+<td>ACL 2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Improved neural network-based multi-label classification with better initialization leveraging label co- occurrence</td>
+<td>NAACL 2016</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Compositional coding capsule network with k-means routing for text classification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Large-scale Multi-label Text Classification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>##专利分类论文总结</p>
+<p>参考链接：<a href="http://kns.cnki.net/kns/brief/Default_Result.aspx" target="_blank" rel="noopener">知网</a>、</p>
+<table>
+<thead>
+<tr>
+<th>论文标题</th>
+<th>作者</th>
+<th>时间</th>
+<th>来源</th>
+<th>简单描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基于深度学习的专利文本分析方法研究</td>
+<td>王英瑜</td>
+<td>2019</td>
+<td>北京邮电大学</td>
+<td>topic model + cnn/rcnn</td>
+<td></td>
+</tr>
+<tr>
+<td>中文专利的自动分类</td>
+<td>牛世雄</td>
+<td>2017</td>
+<td>大连理工</td>
+<td>tf-idf特征提取，词向量+空间向量/词袋模型的文本表示，重点在于提出了新的文本表示方法</td>
+<td></td>
+</tr>
+<tr>
+<td>基于深度学习理论与方法的中文专利文本自动分类研究</td>
+<td>马双刚</td>
+<td>2016</td>
+<td>江苏大学</td>
+<td>分词+DAE自动编码器特征提取+SVM分类器</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>##论文简述</p>
+<h4 id="Text-Classification-Algorithms-A-Survey"><a href="#Text-Classification-Algorithms-A-Survey" class="headerlink" title="Text Classification Algorithms: A Survey"></a>Text Classification Algorithms: A Survey</h4><p>大多数文本分类和文档分类系统可以分解为以下四个阶段：特征提取、降维、分类器选择和评估。</p>
+<p>文本分类分为4个级别：文档级别、段落级别、句子级别、子句级别（算法获得句子内的子表达式的相关类别）</p>
+<ol>
+<li><p><strong>Text Preprocessing</strong> 数据预处理：消除噪音</p>
+<p>分词、去除停用词、俚语和缩略词、关键标点符号和特殊字符、拼写检查、Stemming 词干提取等</p>
+</li>
+<li><p><strong>Feature Extraction </strong>特征抽取：信息特征化</p>
+<ul>
+<li><p><strong>Weighted word</strong> 加权词：</p>
+<ul>
+<li><p><strong>TF/Bag of Words (BoW)</strong>：最常用的，词袋，文本的主体被认为是一袋单词，单词列表按照个数被创建。忽略了语法和顺序，但是利用了计数特征。容易导致一些特别常用的词在文本表示中占主要地位。使用one-hot编码，由于词汇量可能达到数百万，导致矩阵十分稀疏。</p>
+</li>
+<li><p><strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>：tf 改进了召回率，idf 提高了准确率。克服了文档中常见术语的限制，但是无法考虑词之间的相似性。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Word embedding</strong> 词嵌入:</p>
+<ul>
+<li><strong>Word2Vec</strong>：CBOW-预测给定上下文的单词、Skip-gram model-预测给定单词的上下文，保持句子的句法和语义信息。缺点是没有充分利用语料信息。</li>
+<li><strong><a href="http://www.fanyeong.com/2018/02/19/glove-in-detail/#comments" target="_blank" rel="noopener">Global Vectors</a> (<a href="https://blog.csdn.net/mr_tyting/article/details/80180780" target="_blank" rel="noopener">GloVe</a>)</strong>：与word2vec相似。但是基于全局词频统计的词表征工具，它把单词表示成一个由实数组成的向量，捕捉到单词间的语义信息，如相似性、类比性，通过对向量的计算，如欧几里得距离和余弦相似度，可以计算两个单词的相似性。</li>
+<li><strong>FastText</strong>：类似于CBOW，两种模型都是基于Hierarchical Softmax，但引入了N-gram信息。适合大型数据+高效的训练速度，支持多语言表达，专注于文本分类。</li>
+<li><strong>Context2vec</strong>：从双向语言模型学习词向量。<a href="https://zhuanlan.zhihu.com/p/63115885" target="_blank" rel="noopener"><strong>ELMo</strong></a>，相对于<strong>GPT</strong>和<strong>Bert</strong>，lstm特征抽取能力弱于transformer，双向拼接融合比一体化融合弱。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Dimensionality Reduction </strong> 降维：</p>
+<ul>
+<li><strong>Component Analysis</strong>：成分分析<ul>
+<li><strong><a href="https://zhuanlan.zhihu.com/p/32412043" target="_blank" rel="noopener">PCA</a></strong>：主成分分析，最重要的降维方法之一。PCA作为降噪算法也是一个有价值的工具，可以帮助避免过拟合问题。</li>
+<li><strong><a href>ICA</a></strong>：独立成分分析</li>
+<li><strong>LDA</strong>：</li>
+<li><strong>NMF</strong>：</li>
+</ul>
+</li>
+<li><strong>Random Projection</strong>：</li>
+<li><p><strong>Autoencoder</strong>：</p>
+<ul>
+<li>CNN</li>
+<li>RNN：</li>
+</ul>
+</li>
+<li><p><strong>T-distributed Stochastic Neighbor Embedding (t-SNE)</strong>：</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Classification Techniques</strong> 分类器：</p>
+<ul>
+<li><p><strong>Rocchio Classification</strong>：</p>
+</li>
+<li><p><strong>Boosting / Bagging</strong>：投票分类技术。Boosting，弱学习算法</p>
+</li>
+<li><p><strong>Bagging</strong>：</p>
+</li>
+<li><p><strong>Logistic Regression</strong>：</p>
+</li>
+<li><p><strong>Naïve Bayes</strong>：</p>
+</li>
+<li><p><strong>K-Nearest Neighbor (KNN)</strong>：</p>
+</li>
+<li><p><strong>Support Vector Machine (SVM)</strong>：</p>
+</li>
+<li><p><strong>Decision Tree</strong>：</p>
+</li>
+<li><p><strong>Random Forest</strong>：</p>
+</li>
+<li><p><strong>Conditional Random Field (CRF)</strong>：</p>
+</li>
+<li><p><strong>Deep Learning</strong>：</p>
+<p>RNN、CNN、DBN、HAN等，见其论文详解</p>
+</li>
+<li><p><strong>Semi-Supervised Learning</strong>：</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Evaluation</strong> 评价方法：</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">text classification</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/text_classification/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vscode_vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/vscode_vue/">vscode配置和vue环境搭建</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/11/12/vscode_vue/" class="archive-article-date">
+  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="1-Vscode配置"><a href="#1-Vscode配置" class="headerlink" title="1. Vscode配置"></a>1. Vscode配置</h4><ul>
+<li><p>下载安装:</p>
+<ol>
+<li><p>ubuntu : </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ubuntu-make</span><br><span class="line">umake web visual-studio-code</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>windows : <a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">https://code.visualstudio.com/Download</a></p>
+        
+          <a class="article-more-a" href="/2019/11/12/vscode_vue/#more">more >></a>
+        
+      
+
+      
+    </li></ol></li></ul></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">config</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/vscode_vue/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-hierarchical_classification" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/hierarchical_classification/">层次文本分类论文（Hierarchical Text Classification）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/11/12/hierarchical_classification/" class="archive-article-date">
+  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​                                               </p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>论文标题</th>
+<th>发表机构</th>
+<th>简单描述</th>
+<th>代码</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><strong>A Survey of Hierarchical Classification</strong></td>
+<td>2011</td>
+<td>定义多级分类的各种类型。flat、local（分三种）、big bang (global)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>HDLTex: Hierarchical Deep Learning for Text Classification</strong></td>
+<td>ICMLA 2017</td>
+<td>二级分类，一级训练完划分文档，二级再训练</td>
+<td><a href="https://github.com/kk7nc/HDLTex" target="_blank" rel="noopener">GitHub</a></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Hierarchical Multi-Label Classification Networks</strong></td>
+<td>ICML 2018</td>
+<td><strong>HMCN</strong>。HMCN-F前馈、HMCN-R循环，融合全局和局部处理方式</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hierarchical Deep Convolutional Neural Network for Large Scale Visual Recognition</td>
+<td>IEEE 2015</td>
+<td>视觉识别任务，<strong>HDCNNs</strong>，将embedding deep CNNs引入到分类层次结构中</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Large-Scale Hierarchical Text Classification with Recursively Regularized Deep Graph-CNN</td>
+<td></td>
+<td><strong>DGCNN</strong>。Recursive Regularization loss function</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Initializing neural networks for hierarchical multi-label text classification</strong></td>
+<td>2017</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>End to End Hierarchical Text Classification with Label Assignment Policy</td>
+<td>ICLR 2018</td>
+<td><strong>HiLAP</strong>。同一篇文章。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hierarchical Classification with Hierarchical Attention Networks</td>
+<td></td>
+<td>就是在<strong>HAN</strong>结构上最后的输出上增加了分级结构，pooling一次分一级。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hierarchical Text Classification and Evaluation</td>
+<td></td>
+<td>定义了多级分类两种评价指标。基于类别相似度和相似距离。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Weakly-Supervised Hierarchical Text Classification</td>
+<td>NAACL 2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Hierarchical multi-label classification using local neural networks</td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="https://www.sciencedirect.com/science/article/pii/S0022000013000718" target="_blank" rel="noopener">论文链接</a></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>A Hierarchical Neural Attention-based Text Classifier</strong></td>
+<td>EMNLP 2018</td>
+<td>encoder：bilstm编码word，decoder：每一级的label与隐层编码结果进行attention。</td>
+<td><a href="https://github.com/koustuvsinha/hier-class" target="_blank" rel="noopener">GitHub</a></td>
+<td><a href="https://github.com/fatecbf/toutiao-multilevel-text-classfication-dataset/" target="_blank" rel="noopener">多级分类数据集</a><br>后续要看的参考文献3篇</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Learning Hierarchical Category Structure for Multi-label Short Text Categorization</strong></td>
+<td>EMNLP 2018</td>
+<td><strong>HFT-CNN</strong>。Hierarchical Fine-tune CNN。<strong>短文本分类</strong>，类似<strong>迁移学习</strong>，基于每个父节点的local classification，父节点嵌入层和卷积层参数共享给子节点。打分机制：BSF和MSF。</td>
+<td><a href="https://github.com/ShimShim46/HFT-CNN" target="_blank" rel="noopener">GitHub</a></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Hierarchical Text Classification with Reinforced Label Assignment</strong></td>
+<td>EMNLP 2019</td>
+<td><strong>HiLAP</strong>。<strong>将多级分类视为一个马尔可夫决策过程</strong>，学习一个Label <strong>Assignment</strong> Policy决定当前实例放在哪个标签上，啥时候停止。</td>
+<td><a href="https://github.com/morningmoni/HiLAP" target="_blank" rel="noopener">GitHub</a></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>NeuralClassifier: An Open-source Neural Hierarchical Multi-label Text Classification Toolkit</strong></td>
+<td>ACL 2019</td>
+<td>腾讯的开源工具，pytorch，为了快速建立层次多标签分类神经网络模型。提供多种文本编码器，如fasttext、textcnn、textrnn等。</td>
+<td><a href="https://github.com/Tencent/NeuralNLP-NeuralClassifier" target="_blank" rel="noopener">GitHub</a></td>
+<td>后续要了解的：region embbedding</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Hierarchical Multi-label Classification of Text with Capsule Networks</strong></td>
+<td>ACL 2019</td>
+<td>使用最简单的<strong>胶囊网络</strong>来进行多级分类。分类不一致策略。利用标签初始化权重。</td>
+<td><a href="https://github.com/uhh-lt/BlurbGenreCollection-HMC" target="_blank" rel="noopener">GitHub</a></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Hierarchical Transfer Learning for Multi-label Text Classification</strong></td>
+<td>ACL 2019</td>
+<td><strong>HTrans</strong>。利用<strong>迁移学习</strong>。给每个类别训练二分类器，父的参数给子类用，输出层训练，用高学习率；其他层参数保持，用低学习率；冻结嵌入层。训练优化类别权重。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Universal Language Model Fine-tuning for Text Classification</p>
+<p>named-entity-recognition</p>
+<p>Weakly-Supervised Hierarchical Text Classification</p>
+<p>A structured self-attentive sentence embedding </p>
+<p>Generative and discriminative text classification with recurrent neural networks </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">text classification</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/hierarchical_classification/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-NER" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/NER/">领域适应NER论文</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/11/12/NER/" class="archive-article-date">
+  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th>论文</th>
+<th>机构</th>
+<th>内容简介</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>semi-supervised multitask learning for sequence labeling</td>
+<td>ACL 2017</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+        
+          <a class="article-more-a" href="/2019/11/12/NER/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NER</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/NER/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-electron_config" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/12/electron_config/">Electron 用法介绍</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/10/12/electron_config/" class="archive-article-date">
+  	<time datetime="2019-10-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Electron 使用教程</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Electron是GitHub开发的一个开源框架。它允许使用Node.js和Chromium完成桌面GUI应用程序的开发。Electron现已被多个开源Web应用程序用于前端与后端的开发，著名项目包括GitHub的Atom和微软的Visual Studio Code。</p>
+<p>官方网站：<a href="https://electronjs.org/" target="_blank" rel="noopener">https://electronjs.org/</a></p>
+<p>中文教程：<a href="https://weishuai.gitbooks.io/electron-/" target="_blank" rel="noopener">https://weishuai.gitbooks.io/electron-/</a></p>
+        
+          <a class="article-more-a" href="/2019/10/12/electron_config/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">config</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/12/electron_config/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-14-LCP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/23/14-LCP/">Longest Common Prefix（最长公共前缀）</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/04/23/14-LCP/" class="archive-article-date">
+  	<time datetime="2019-04-23T02:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Description:</strong><br>Write a function to find the longest common prefix string amongst an array of strings.<br>If there is no common prefix, return an empty string “”. <a href="https://leetcode.com/problems/longest-common-prefix/" target="_blank" rel="noopener">Do it now!</a></p>
+<h3 id="方法1：Vertical-scanning（垂直扫描）"><a href="#方法1：Vertical-scanning（垂直扫描）" class="headerlink" title="方法1：Vertical scanning（垂直扫描）"></a>方法1：Vertical scanning（垂直扫描）</h3><ul>
+<li>思想：同一列从上往下比较。</li>
+<li>实现代码：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; strs[<span class="number">0</span>].length(); i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(String s : strs) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i &gt;= s.length() || s.charAt(i) != strs[<span class="number">0</span>].charAt(i)) </span><br><span class="line">                <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>, i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> strs[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/04/23/14-LCP/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/23/14-LCP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-5-LCS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/19/5-LCS/">Longest Palindromic Substring (最长回文子串)</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/04/19/5-LCS/" class="archive-article-date">
+  	<time datetime="2019-04-19T05:04:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Description:</strong><br>Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000. <a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank" rel="noopener">Do it now!</a></p>
+<h3 id="方案1-Longest-Common-Substring（类似于求最长公共子串问题）"><a href="#方案1-Longest-Common-Substring（类似于求最长公共子串问题）" class="headerlink" title="方案1: Longest Common Substring（类似于求最长公共子串问题）"></a>方案1: Longest Common Substring（类似于求最长公共子串问题）</h3><ul>
+<li><a href="https://www.kancloud.cn/digest/pieces-algorithm/163624" target="_blank" rel="noopener">最长公共子串参考文档</a></li>
+<li>想法：S‘为S的转置，求S和S’的最长公共子串<blockquote>
+<p>例子：S = “c<strong>aba</strong>“, S’= “<strong>aba</strong>c”.  -&gt; SS = “aba”</p>
+</blockquote>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/04/19/5-LCS/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/19/5-LCS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-yilia_theme" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/12/yilia_theme/">Hexo 主题 yilia 优化</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2019/04/12/yilia_theme/" class="archive-article-date">
+  	<time datetime="2019-04-12T03:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>好吧，我承认自己是一个外貌协会。<br>既然倒腾了这个博客，就尽量让自己感到舒服😌。<br>废话不多说了，开始吧。</p>
+<h2 id="1-添加网站浏览量统计"><a href="#1-添加网站浏览量统计" class="headerlink" title="1. 添加网站浏览量统计"></a>1. 添加网站浏览量统计</h2><ul>
+<li>不蒜子官网：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">http://busuanzi.ibruce.info/</a></li>
+<li>安装脚本（必选），在 <code>themes\yilia\layout_partial\footer.ejs</code> 最后添加：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/04/12/yilia_theme/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/12/yilia_theme/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -161,13 +1422,15 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/15/hexo/">使用 Hexo 搭建 Github 博客</a>
+      <a class="article-title" href="/2019/04/11/hexo/">使用 Hexo 搭建 Github 博客</a>
     </h1>
   
 
+        <!--显示阅读次数-->
         
-        <a href="/2018/10/15/hexo/" class="archive-article-date">
-  	<time datetime="2018-10-15T01:11:09.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-15</time>
+        
+        <a href="/2019/04/11/hexo/" class="archive-article-date">
+  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
@@ -180,68 +1443,10 @@
 <li>验证各安装版本：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br><span class="line">$ hexo -v</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3><ul>
-<li><p>安装 Hexo 完成后，执行下列命令，会在指定文件夹中新建所需要的文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt; </span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行下列命令，可以查看在本地预览：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g   <span class="comment"># 生成静态页面</span></span><br><span class="line">$ hexo s  <span class="comment"># 启动本地 blog 服务器</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>打开浏览器，在地址栏输入 <u>localhost:4000</u>，就可以查看本地博客了</p>
-<h3 id="3-同步-Hexo-到-Github"><a href="#3-同步-Hexo-到-Github" class="headerlink" title="3. 同步 Hexo 到 Github"></a>3. 同步 Hexo 到 Github</h3><ul>
-<li>新建 Github 项目，命名为 XXX.github.io，XXX 为自己的GitHub 用户名。</li>
-<li><p>打开本地文件夹内的 <code>_config.yml</code> 配置文件，进行如下修改：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/XXX/XXX.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git –save  <span class="comment"># 安装 hexo-deployer-git</span></span><br><span class="line">$ hexo g  <span class="comment"># 本地生成静态文件</span></span><br><span class="line">$ hexo d  <span class="comment"># 将本地静态文件推送至Github</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>此时，打开浏览器，访问 <a href="http://XXX.github.io" target="_blank" rel="noopener">http://XXX.github.io</a></p>
-<h3 id="4-添加-ssh-key-到-GitHub"><a href="#4-添加-ssh-key-到-GitHub" class="headerlink" title="4. 添加 ssh key 到 GitHub"></a>4. 添加 ssh key 到 GitHub</h3><ul>
-<li><p>检查 ssh key 是否存在，如果存在可以跳过下一步：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成新的 ssh key：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"your_email"</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>默认会在相应路径下（<code>~/.ssh/id_rsa.pub</code>）生成<code>id_rsa</code>私钥文件和<code>id_rsa.pub</code>公钥文件，私钥不要公开或者上传，公钥可以上传至github进行验证。</p>
-<ul>
-<li>将ssh key添加至 Github</li>
-</ul>
-<p>用终端打开 <code>id_rsa.pub</code>，复制内容，进入 github -&gt;settings -&gt;ssh and gpg keys -&gt;new ssh key 粘贴。</p>
-<h3 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h3><ul>
-<li><p>在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo</a> 官网上选择感兴趣的主题，将主题项目拷贝到 themes 文件夹下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改 <code>_config.yml</code>，将主题设置为 yilia</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: yilia</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>&nbsp;</p>
-<h2 id="问题一：多终端同步-Hexo"><a href="#问题一：多终端同步-Hexo" class="headerlink" title="问题一：多终端同步 Hexo"></a>问题一：多终端同步 Hexo</h2><ul>
-<li>hexo 的原理<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean  <span class="comment"># 清理你的项目缓存</span></span><br><span class="line">$ hexo g  <span class="comment"># 将你刚刚编写的md编译为浏览器可以识别的html</span></span><br><span class="line">$ hexo d  <span class="comment"># 发布到远程仓库</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>hexo d 是发布到 <code>_config.yml</code> 中配置的branch分支上（一般都是master主分支），所以就可以将 hexo 主文件（未编译的）放到另一个仓库中，更新文章时，只需再将这个仓库提交一下就可以了。</p>
-<ul>
-<li>开始<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将更改的文件加入 git 仓库中</span></span><br><span class="line">$ git add <span class="built_in">source</span> </span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建 hexo 分支</span></span><br><span class="line">$ git branch hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到 hexo 分支</span></span><br><span class="line">$ git checkout hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将本地与 Github 项目对接</span></span><br><span class="line">$ git remote add origin https://github.com/yourname/yourname.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># push 到 Github 项目的 hexo 分支上</span></span><br><span class="line">$ git push origin hexo</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>至此，hexo主站程序上传到hexo分支了，发布文章时，正常流程写md，<code>hexo clean</code>，<code>hexo g -d</code>就可以啦~</p>
-<ul>
-<li><p>另外一个终端更新</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将Github中hexo分支clone到本地</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/XXX/XXX.github.io.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># cheackout 远程代码到本地hexo分支</span></span><br><span class="line">$ git checkout -b hexo origin/hexo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意，这里一定要切换到刚刚clone的文件夹内执行，安装必要的所需组件，不用再init</span></span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建一个.md文件，并编辑完成自己的博客内容</span></span><br><span class="line">$ hexo new post <span class="string">"new blog name"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 经测试每次只要更新source中的文件到Github中即可，因为只是新建了一篇新博客</span></span><br><span class="line">$ git add <span class="built_in">source</span></span><br><span class="line">$ git commit -m <span class="string">"your desciption"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新分支</span></span><br><span class="line">$ git push origin hexo</span><br><span class="line"><span class="comment"># push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master</span></span><br><span class="line">$ hexo d -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>每次切换终端时，记得先执行 git pull origin hexo 将本地与远程同步哦～<br>&nbsp;</p>
-<h2 id="问题二：新换-theme-无法同步远程"><a href="#问题二：新换-theme-无法同步远程" class="headerlink" title="问题二：新换 theme 无法同步远程"></a>问题二：新换 theme 无法同步远程</h2></li>
-</ul>
-<p>刚开始我的主题是 next，后来嫌弃它太单调了，就换成了现在的主题，但是发现 push 不上去了，于是开始各种 Google。<br>终于找到了可靠的解决方案。<a href="https://pangjunpeng.com/2018/03/22/%E6%80%BB%E7%BB%93%E4%B8%80%E4%B8%8B%E8%BF%99%E5%87%A0%E5%A4%A9%E6%90%AD%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A4%9A%E7%BB%88%E7%AB%AF%E6%9B%B4%E6%96%B0hexo%EF%BC%8Cthems%E4%B8%BB%E9%A2%98%E6%8F%90%E4%BA%A4%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%AD%89/" target="_blank" rel="noopener">原文链接点这里</a><br>由于 themes 中 yilia 是 clone 的，所以不在我的版本库中，自然也就 push 不上去。<br>需要删除 .git 文件夹，重新 <code>add commit push</code>。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -rf --cached themes/yilia</span><br><span class="line">$ git add themes/yilia/*</span><br><span class="line">$ git commit</span><br><span class="line">$ git push</span><br></pre></td></tr></table></figure>
-<p>在此感谢提供各种解决方法的博主们～<br>出现的问题其实还有一些，但是 Google 就够了，以后继续加油吧！</p>
-
+<h3 id="2-初始化-Blog"><a href="#2-初始化-Blog" class="headerlink" title="2. 初始化 Blog"></a>2. 初始化 Blog</h3>
+        
+          <a class="article-more-a" href="/2019/04/11/hexo/#more">more >></a>
+        
       
 
       
@@ -249,11 +1454,108 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/15/hexo/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/11/hexo/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-linux_learning" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/12/linux_learning/">Linux 学习笔记</a>
+    </h1>
+  
+
+        <!--显示阅读次数-->
+        
+        
+        <a href="/2018/06/12/linux_learning/" class="archive-article-date">
+  	<time datetime="2018-06-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Linux-学习笔记"><a href="#Linux-学习笔记" class="headerlink" title="Linux 学习笔记"></a>Linux 学习笔记</h2><h4 id="tail-命令语法"><a href="#tail-命令语法" class="headerlink" title="tail 命令语法"></a>tail 命令语法</h4><blockquote>
+<p><strong>tail [ -f ] [ -c Number | -n Number | -m Number | -b Number | -k Number ] [ File ]</strong></p>
+</blockquote>
+<ol>
+<li><p>参数解释：<br><strong><em>-f</em></strong>    该参数用于监视File文件增长。<br><strong><em>-c Number</em></strong>    从 Number 字节位置读取指定文件<br><strong><em>-n Number</em></strong>    从 Number 行位置读取指定文件。<br><strong><em>-m Number</em></strong>    从 Number 多字节字符位置读取指定文件，比方你的文件假设包括中文字，假设指定-c参数，可能导致截断，但使用-m则会避免该问题。<br><strong><em>-b Number</em></strong>    从 Number 表示的512字节块位置读取指定文件。<br><strong><em>-k Number</em></strong>    从 Number 表示的1KB块位置读取指定文件。<br><strong><em>File</em></strong> 指定操作的目标文件名称<br>上述命令中，都涉及到number，假设不指定，默认显示10行。Number前面可使用正负号，表示该偏移从顶部还是从尾部開始计算。<br>tail可运行文件一般在/usr/bin/以下。</p>
+        
+          <a class="article-more-a" href="/2018/06/12/linux_learning/#more">more >></a>
+        
+      
+
+      
+    </li></ol></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">learning</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/12/linux_learning/">展开全文 >></a>
         </p>
       
 
@@ -284,6 +1586,10 @@
 
   
   
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
 
 
           </div>
@@ -294,13 +1600,19 @@
     <div id="footer-info">
     	<div class="footer-left">
     		&copy; 2019 Lalalei
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      </div>
+      <div style="display: inline-block; margin-left: 75px;">
+          总访问量：<span id="busuanzi_value_site_pv"></span> |
+          访客数：<span id="busuanzi_value_site_uv"></span>
+      </div>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      </div>
     </div>
   </div>
 </footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
@@ -355,6 +1667,8 @@ MathJax.Hub.Queue(function() {
       
     
       
+      
+      
     
       
       
@@ -366,13 +1680,15 @@ MathJax.Hub.Queue(function() {
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -391,13 +1707,57 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NLP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NER</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">config</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">text classification</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vim</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
@@ -436,11 +1796,23 @@ MathJax.Hub.Queue(function() {
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+        <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://yuanwenjian.github.io" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>小苑同志的博客</a>
+            </li>
+          
+        </ul>
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Lalalei&lt;br&gt;&lt;br&gt;东北大学研究生在读&lt;br&gt;爱吃，爱玩，爱笑，也爱学习，哈哈&lt;br&gt;希望未来能一直开心快乐&lt;br&gt;不忘初心，就是这样</div>
   	  	
     	</section>
     
@@ -514,5 +1886,5 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"scale":1.2,"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":30,"vOffset":18},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 </html>

@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://lalalei21.github.io">
-  <title>Archives | Lalalei&#39;s blog</title>
+  <title>VIM 学习笔记 | Lalalei&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lalalei&#39;s blog">
-<meta property="og:url" content="https://lalalei21.github.io/archives/index.html">
+  <meta name="description" content="命令行模式($)： 光标跳转(n+) h/j/k/l - 左下右上w/e - 下一单词头/尾0/^/$ - 行首/非零行首/行末[[ / ]] - 文件首/尾     复制  复制到寄存器 - y  粘贴 - p   删除  单个字符 - x单词含空/不含 - daw/diw光标-下一个单词头/尾 - db/dw行 - dd光标-行尾 - D当前-文件头/尾 - dgg/dG    末行模式(:">
+<meta name="keywords" content="learning,vim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VIM 学习笔记">
+<meta property="og:url" content="https://lalalei21.github.io/2018/06/12/vim_learning/index.html">
 <meta property="og:site_name" content="Lalalei&#39;s blog">
+<meta property="og:description" content="命令行模式($)： 光标跳转(n+) h/j/k/l - 左下右上w/e - 下一单词头/尾0/^/$ - 行首/非零行首/行末[[ / ]] - 文件首/尾     复制  复制到寄存器 - y  粘贴 - p   删除  单个字符 - x单词含空/不含 - daw/diw光标-下一个单词头/尾 - db/dw行 - dd光标-行尾 - D当前-文件头/尾 - dgg/dG    末行模式(:">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png">
+<meta property="og:updated_time" content="2019-12-03T06:09:20.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lalalei&#39;s blog">
+<meta name="twitter:title" content="VIM 学习笔记">
+<meta name="twitter:description" content="命令行模式($)： 光标跳转(n+) h/j/k/l - 左下右上w/e - 下一单词头/尾0/^/$ - 行首/非零行首/行末[[ / ]] - 文件首/尾     复制  复制到寄存器 - y  粘贴 - p   删除  单个字符 - x单词含空/不含 - daw/diw光标-下一个单词头/尾 - db/dw行 - dd光标-行尾 - D当前-文件头/尾 - dgg/dG    末行模式(:">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png">
   
     <link rel="alternative" href="/atom.xml" title="Lalalei&#39;s blog" type="application/atom+xml">
   
@@ -169,439 +176,284 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vim_learning" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/text_classification/" class="archive-article-date">
-  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/12/text_classification/">文本分类论文（Text Classification）</a>
+    <h1 class="article-title" itemprop="name">
+      VIM 学习笔记
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">text classification</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/vscode_vue/" class="archive-article-date">
-  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/12/vscode_vue/">vscode配置和vue环境搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">config</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/hierarchical_classification/" class="archive-article-date">
-  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/12/hierarchical_classification/">层次文本分类论文（Hierarchical Text Classification）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">text classification</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/12/NER/" class="archive-article-date">
-  	<time datetime="2019-11-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/12/NER/">领域适应NER论文</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NLP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NER</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/12/electron_config/" class="archive-article-date">
-  	<time datetime="2019-10-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/12/electron_config/">Electron 用法介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">config</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/23/14-LCP/" class="archive-article-date">
-  	<time datetime="2019-04-23T02:52:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/23/14-LCP/">Longest Common Prefix（最长公共前缀）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/19/5-LCS/" class="archive-article-date">
-  	<time datetime="2019-04-19T05:04:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/19/5-LCS/">Longest Palindromic Substring (最长回文子串)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">leetcode</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/12/yilia_theme/" class="archive-article-date">
-  	<time datetime="2019-04-12T03:53:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/12/yilia_theme/">Hexo 主题 yilia 优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/11/hexo/" class="archive-article-date">
-  	<time datetime="2019-04-11T12:17:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/11/hexo/">使用 Hexo 搭建 Github 博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/12/linux_learning/" class="archive-article-date">
+        <!--显示阅读次数-->
+        
+          <br>
+          <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;cursor: text">
+          <span class="icon-sort"></span>
+          <span style="color:#f173ac;font-size:14px;display: inline;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+          </span>
+          </a>
+        
+        
+        <a href="/2018/06/12/vim_learning/" class="archive-article-date">
   	<time datetime="2018-06-12T06:52:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-12</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/12/linux_learning/">Linux 学习笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://images2015.cnblogs.com/blog/175824/201611/175824-20161123224659425-328736487.png" alt="image"></p>
+<h4 id="命令行模式-："><a href="#命令行模式-：" class="headerlink" title="命令行模式($)："></a>命令行模式($)：</h4><ol>
+<li>光标跳转(n+)<blockquote>
+<p>h/j/k/l - 左下右上<br>w/e - 下一单词头/尾<br>0/^/$ - 行首/非零行首/行末<br>[[ / ]] - 文件首/尾</p>
+</blockquote>
+</li>
+</ol>
+<ol start="2">
+<li><p>复制</p>
+<blockquote>
+<p>复制到寄存器 - y  粘贴 - p</p>
+</blockquote>
+</li>
+<li><p>删除</p>
+<blockquote>
+<p>单个字符 - x<br>单词含空/不含 - daw/diw<br>光标-下一个单词头/尾 - db/dw<br>行 - dd<br>光标-行尾 - D<br>当前-文件头/尾 - dgg/dG</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="末行模式-："><a href="#末行模式-：" class="headerlink" title="末行模式(:)："></a>末行模式(:)：</h4><ol>
+<li><p>设置行号</p>
+<blockquote>
+<p>set number ,set nu<br>set nonumber</p>
+</blockquote>
+</li>
+<li><p>删除</p>
+<blockquote>
+<p>当前 - d<br>当前行-末尾 - ,$d<br>第n行到末尾 - n,$d<br>开始-当前 - 0,d<br>合并两行/删除换行符 - j</p>
+</blockquote>
+</li>
+</ol>
+<ol start="4">
+<li><p>替换字符串  </p>
+<blockquote>
+<p>此行第一个：s/old/new<br>此行所有：s/old/new/g<br>全文所有：%s/old/new/g<br>所有询问：%s/old/new/gc</p>
+</blockquote>
+</li>
+<li><p>查找  </p>
+<blockquote>
+<p>/ - 定位到下一个匹配的文本<br>? - 定位到前一个匹配的文本<br>n - 向前查找下一个匹配的文本<br>N - 向后查找前一个匹配的文本</p>
+</blockquote>
+</li>
+<li><p>退出</p>
+<blockquote>
+<p>:w - 保存文件但不退出vi<br>:w file - 将修改另外保存到file中，不退出vi<br>:w! - 强制保存，不推出vi<br>:wq - 保存文件并退出vi<br>:wq! - 强制保存文件，并退出vi<br>:q - 不保存文件，退出vi<br>:q! - 不保存文件，强制退出vi<br>:e! - 放弃所有修改，从上次保存文件开始再编辑</p>
+</blockquote>
+</li>
+<li><p>截取转存</p>
+<blockquote>
+<p>1,5 w ~/163.txt </p>
+</blockquote>
+</li>
+</ol>
+<h4 id="编辑模式："><a href="#编辑模式：" class="headerlink" title="编辑模式："></a>编辑模式：</h4>
+      
 
-        <div class="article-info info-on-right">
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖(*ﾟ▽ﾟ*)<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">learning</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vim</a>
+        		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://qr.topscan.com/api.php?text=https://lalalei21.github.io/2018/06/12/vim_learning/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/06/12/linux_learning/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Linux 学习笔记
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/05/04/sublime3_config/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Sublime3 配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#命令行模式-："><span class="toc-number">1.</span> <span class="toc-text">命令行模式($)：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#末行模式-："><span class="toc-number">2.</span> <span class="toc-text">末行模式(:)：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编辑模式："><span class="toc-number">3.</span> <span class="toc-text">编辑模式：</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
+  
+    <div id="gitalk-container" style="padding: 0 30px;"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+var gitalk = new Gitalk({
+  clientID: '1c92f03bc20099211872',
+  clientSecret: '5c5b458be40fd177ac8592700e296b1465d86f36',
+  repo: 'lalalei21.github.io',
+  owner: 'lalalei21',
+  admin: 'lalalei21',
+  id: 'Tue Jun 12 2018 14:52:26 GMT+0800',      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+</script>
   
 
 
@@ -631,8 +483,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
