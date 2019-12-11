@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lalalei&#39;s blog">
 <meta property="og:description" content="文本分类是自然语言处理中的一项基础任务，目的是将文本分配给指定标签中的一个或多个。通过将近年来看过的顶会论文集中到一起，希望对以后的工作有一定的帮助。参考链接：https://paperswithcode.com/task/text-classification">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-03T07:49:04.356Z">
+<meta property="og:updated_time" content="2019-12-11T10:55:00.309Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Text Classification 文本分类论文">
 <meta name="twitter:description" content="文本分类是自然语言处理中的一项基础任务，目的是将文本分配给指定标签中的一个或多个。通过将近年来看过的顶会论文集中到一起，希望对以后的工作有一定的帮助。参考链接：https://paperswithcode.com/task/text-classification">
@@ -219,11 +219,11 @@ var _hmt = _hmt || [];
 <tbody>
 <tr>
 <td>0</td>
-<td><strong>Text Classification Algorithms: A Survey</strong></td>
-<td></td>
+<td><a href="#Text-Classification-Algorithms:-A-Survey">Text Classification Algorithms: A Survey</a></td>
+<td>2019.4</td>
 <td>文本分类综述</td>
 <td><a href="https://github.com/kk7nc/Text_Classification" target="_blank" rel="noopener">GitHub</a></td>
-<td>1233467</td>
+<td><a href="https://www.arxiv-vanity.com/papers/1904.08067/" target="_blank" rel="noopener">weblink</a></td>
 </tr>
 <tr>
 <td>1</td>
@@ -290,12 +290,12 @@ var _hmt = _hmt || [];
 <td></td>
 </tr>
 <tr>
-<td></td>
+<td>-</td>
 <td>A Structured Self-Attentive Sentence Embedding</td>
 <td>ICLR 2017</td>
 <td>Self-Attention</td>
 <td></td>
-<td></td>
+<td>Attention.4</td>
 </tr>
 <tr>
 <td>9</td>
@@ -331,22 +331,30 @@ var _hmt = _hmt || [];
 </tr>
 <tr>
 <td>13</td>
-<td>Universal Language Model Fine-tuning for Text Classification</td>
+<td><a href="#Universal-Language-Model-Fine-tuning-for-Text-Classification">Universal Language Model Fine-tuning for Text Classification</a></td>
 <td>ACL 2018</td>
-<td>ULMFiT</td>
+<td>ULMFiT。通用语言模型微调，迁移学习方法。包含很多训练技巧。</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>14</td>
-<td>Graph Convolutional Networks for Text Classification</td>
-<td>AAAI 2019</td>
-<td></td>
+<td>Multi-Task Label Embedding for Text Classification</td>
+<td>EMNLP 2018</td>
+<td>1.利用标签描述信息 2.多任务学习，新任务来时可scale和transfer 3.增加新的有标注/无标注的数据任务时，hot/cold/zero update</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>15</td>
+<td>Graph Convolutional Networks for Text Classification</td>
+<td>AAAI 2019</td>
+<td>GCN。将文本和单词分别作为节点，文本与单词(TF-IDF)、单词间(PMI)的联系作为边。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
 <td>Adaptive Convolution for Text Classification</td>
 <td>NAACL  2019</td>
 <td>自适应卷积，根据不同输入（上一个卷积块的输出）动态生成filter。提出hash genetation。</td>
@@ -354,18 +362,18 @@ var _hmt = _hmt || [];
 <td></td>
 </tr>
 <tr>
-<td>16</td>
-<td>Neural Attentive Bag-of-Entities Model for Text Classification</td>
 <td></td>
-<td>利用实体信息</td>
+<td>Topic Memory Networks for Short Text Classification</td>
+<td>EMNLP  2018</td>
+<td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td></td>
-<td>Topic Memory Networks for Short Text Classification</td>
-<td>EMNLP  2018</td>
-<td></td>
+<td>Neural Attentive Bag-of-Entities Model for Text Classification</td>
+<td>CoNLL 2019</td>
+<td>利用实体信息</td>
 <td></td>
 <td></td>
 </tr>
@@ -415,110 +423,17 @@ var _hmt = _hmt || [];
 <td></td>
 <td></td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<h2 id="专利分类论文总结"><a href="#专利分类论文总结" class="headerlink" title="专利分类论文总结"></a>专利分类论文总结</h2><p>参考链接：<a href="http://kns.cnki.net/kns/brief/Default_Result.aspx" target="_blank" rel="noopener">知网</a>、</p>
-<table>
-<thead>
-<tr>
-<th>论文标题</th>
-<th>作者</th>
-<th>时间</th>
-<th>来源</th>
-<th>简单描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>基于深度学习的专利文本分析方法研究</td>
-<td>王英瑜</td>
-<td>2019</td>
-<td>北京邮电大学</td>
-<td>topic model + cnn/rcnn</td>
-<td></td>
-</tr>
-<tr>
-<td>中文专利的自动分类</td>
-<td>牛世雄</td>
-<td>2017</td>
-<td>大连理工</td>
-<td>tf-idf特征提取，词向量+空间向量/词袋模型的文本表示，重点在于提出了新的文本表示方法</td>
-<td></td>
-</tr>
-<tr>
-<td>基于深度学习理论与方法的中文专利文本自动分类研究</td>
-<td>马双刚</td>
-<td>2016</td>
-<td>江苏大学</td>
-<td>分词+DAE自动编码器特征提取+SVM分类器</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-<h2 id="论文简述"><a href="#论文简述" class="headerlink" title="论文简述"></a>论文简述</h2><h4 id="Text-Classification-Algorithms-A-Survey"><a href="#Text-Classification-Algorithms-A-Survey" class="headerlink" title="Text Classification Algorithms: A Survey"></a>Text Classification Algorithms: A Survey</h4><p>大多数文本分类和文档分类系统可以分解为以下四个阶段：特征提取、降维、分类器选择和评估。</p>
+<h2 id="论文简述"><a href="#论文简述" class="headerlink" title="论文简述"></a>论文简述</h2><h4 id="Text-Classification-Algorithms-A-Survey"><a href="#Text-Classification-Algorithms-A-Survey" class="headerlink" title="Text Classification Algorithms: A Survey"></a>Text Classification Algorithms: A Survey</h4><p>大多数文本分类系统可以分解为以下四个阶段：特征提取、降维、分类器选择和模型评估。</p>
 <p>文本分类分为4个级别：文档级别、段落级别、句子级别、子句级别（算法获得句子内的子表达式的相关类别）</p>
 <ol>
-<li><strong>Text Preprocessing</strong> 数据预处理：消除噪音<br>分词、去除停用词、俚语和缩略词、关键标点符号和特殊字符、拼写检查、Stemming 词干提取等</li>
-<li><strong>Feature Extraction</strong> 特征抽取：信息特征化<ul>
+<li><p><strong>Text Preprocessing</strong> 数据预处理：消除噪音<br>分词、去除停用词、俚语和缩略词、关键标点符号和特殊字符、拼写检查、Stemming 词干提取等</p>
+</li>
+<li><p><strong>Feature Extraction</strong> 特征抽取：信息特征化</p>
+<ul>
 <li><strong>Weighted word</strong> 加权词：<ul>
 <li><strong>TF/Bag of Words (BoW)</strong>：最常用的，词袋，文本的主体被认为是一袋单词，单词列表按照个数被创建。忽略了语法和顺序，但是利用了计数特征。容易导致一些特别常用的词在文本表示中占主要地位。使用one-hot编码，由于词汇量可能达到数百万，导致矩阵十分稀疏。</li>
 <li><strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>：tf 改进了召回率，idf 提高了准确率。克服了文档中常见术语的限制，但是无法考虑词之间的相似性。</li>
@@ -533,7 +448,8 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 </li>
-<li><strong>Dimensionality Reduction</strong> 降维：<ul>
+<li><p><strong>Dimensionality Reduction</strong> 降维：</p>
+<ul>
 <li><strong>Component Analysis</strong>：成分分析<ul>
 <li><strong><a href="https://zhuanlan.zhihu.com/p/32412043" target="_blank" rel="noopener">PCA</a></strong>：主成分分析，最重要的降维方法之一。PCA作为降噪算法也是一个有价值的工具，可以帮助避免过拟合问题。</li>
 <li><strong><a href>ICA</a></strong>：独立成分分析</li>
@@ -550,23 +466,72 @@ var _hmt = _hmt || [];
 <li><strong>T-distributed Stochastic Neighbor Embedding (t-SNE)</strong>：</li>
 </ul>
 </li>
-<li><strong>Classification Techniques</strong> 分类器：<ul>
-<li><strong>Rocchio Classification</strong>：</li>
-<li><strong>Boosting / Bagging</strong>：投票分类技术。Boosting，弱学习算法</li>
-<li><strong>Bagging</strong>：</li>
-<li><strong>Logistic Regression</strong>：</li>
-<li><strong>Naïve Bayes</strong>：</li>
-<li><strong>K-Nearest Neighbor (KNN)</strong>：</li>
-<li><strong>Support Vector Machine (SVM)</strong>：</li>
-<li><strong>Decision Tree</strong>：</li>
-<li><strong>Random Forest</strong>：</li>
-<li><strong>Conditional Random Field (CRF)</strong>：</li>
-<li><strong>Deep Learning</strong>：<br>RNN、CNN、DBN、HAN等，见其论文详解</li>
-<li><strong>Semi-Supervised Learning</strong>：</li>
+<li><p><strong>Classification Techniques</strong> 分类器：</p>
+<ul>
+<li><p><strong>传统方法 - Rocchio Classification</strong>：</p>
+</li>
+<li><p><strong>集成算法</strong>：</p>
+<p>Boosting、Bagging。投票分类技术。Boosting，弱学习算法</p>
+</li>
+<li><p><strong>传统且流行的算法</strong>：</p>
+<p>Logistic Regression (LR)、Naïve Bayes (NB)、K-Nearest Neighbor (KNN)、Support Vector Machine (SVM)</p>
+</li>
+<li><p><strong>基于树的算法</strong>：</p>
+<p>Decision Tree、Random Forest</p>
+</li>
+<li><p><strong>Conditional Random Field (CRF)</strong>：</p>
+</li>
+<li><p><strong>Deep Learning</strong>：<br>RNN、CNN、DBN、HAN</p>
+</li>
+<li><p><strong>Semi-Supervised Learning</strong>：</p>
+</li>
 </ul>
 </li>
-<li><strong>Evaluation</strong> 评价方法：</li>
+<li><p><strong>Evaluation</strong> 评价方法：</p>
+<ul>
+<li>confusion matrix 混淆矩阵、accuracy 准确率、precision 精确率、recall 召回率、F1-score</li>
+<li>macro-averaging、micro-averaging</li>
+<li>Matthews Correlation Coefficient (MCC)</li>
+<li>Receiver Operating Characteristics (ROC)</li>
+<li>Area Under ROC Curve (AUC)</li>
+</ul>
+</li>
 </ol>
+<p>&nbsp;</p>
+<h4 id="Universal-Language-Model-Fine-tuning-for-Text-Classification"><a href="#Universal-Language-Model-Fine-tuning-for-Text-Classification" class="headerlink" title="Universal Language Model Fine-tuning for Text Classification"></a>Universal Language Model Fine-tuning for Text Classification</h4><ul>
+<li><p>摘要</p>
+<p>迁移学习在计算机视觉方面取得了很多成功，而在自然语言处理还没有太多进展，仅仅停留在使用 word2vec 或多任务学习的阶段，需要从头开始训练。<strong>本文提出了一个针对NLP的有效迁移学习方法，通用语言模型微调(ULMFiT)，同时介绍了用于微调模型的相关技巧。</strong>而且在100个小标注样本上微调的性能和100倍数据从头开始训练的性能等价。</p>
+</li>
+<li><p>介绍</p>
+<p>很多深度学习模型，要 <strong>从头开始训练，大量数据，收敛时间长</strong>，考虑迁移学习技术 - 微调的预训练词向量。</p>
+<p>基于微调的迁移技术在NLP还不成功。</p>
+<p>LM fine-tuning：<strong>小数据上过拟合，用分类器微调时会灾难性遗忘LM的知识</strong>。</p>
+<p>根据深度学习模型 <strong>“越底层的特征越通用，越顶层的特征越特殊”</strong>这个特点，可以将其分为两部分，底部是一个通用的模型，由一个大型数据集预训练得到，其能够使小数据集避免从头开始训练（随机初始化参数通常比预训练参数微调要差），顶部则根据下游任务从头开始训练。</p>
+</li>
+<li><p>模型</p>
+<p><strong>General-domain LM pretraining</strong>：在Wikitext-103数据集（包含 28,595 篇维基百科文章和 1030 亿个单词）上训练语言模型，从而捕获不同层次文本的一般特征。</p>
+<p><strong>Target task LM fine-tuning</strong>：针对目标任务的小数据微调LM。使用了2个trick，学习不同层次文本针对特定任务的特征。</p>
+<ul>
+<li><strong>Disciminative fine-tuning 区分微调</strong>：由于不同层捕获的信息不同，需要不同程度的微调。给每层设置不同的学习率（底层通用较小，顶层特殊较大），先通过微调最后一层参数确定一个合适的学习率，然后下一层使用上一层1/2.6的学习率。</li>
+<li><strong>Slanted triangular learning rates 斜三角学习率</strong>：学习率先快增后慢减。为了适应特定任务特征的参数，让模型在开始先用较小学习率，快速增大收敛到合适的区域，再从大学习率开始慢慢减小进行优化。</li>
+</ul>
+<p><strong>Target task classifier fine-tuning</strong>：训练顶层分类器。用了4个trick。</p>
+<ul>
+<li><strong>Concat pooling</strong>：如仅使用RNN最后时刻步的隐层状态，会丢失很多信息。所以将最后时刻步的隐层、隐层的最大池化、平均池化连接在一起。</li>
+<li><strong>Gradual unfreezing</strong>：直接 fine-tune 整个网络会导致网络遗忘之前预训练得到的通用特征，但是fine-tune过于谨慎会导致收敛太慢。本文使用逐层解冻的方法，从最后一层开始（包括最特殊的知识）自顶向下，每一个epoch加入一个解冻层，即1epoch微调顶层，2epoch微调上两层，以此类推。文中提到的<strong>chain-thaw</strong> 每次训练单独一层，不用累加的方式。</li>
+<li><strong>BPTT for Text Classification（BPT3C）</strong>：使用基于时间的反向传播(BPTT)来训练语言模型，使得能够对大的输入序列进行梯度传播。文档划分为batch_size为b的批次；每个batch开始训练前，用上一个batch的最终状态初始化模型；跟踪平均值和最大池的隐藏状态；梯度反向传播到隐层状态有用的batch。</li>
+<li><strong>Bidirectional language model</strong>：预训练前向LM和后向LM，每个LM独立使用BPT3C微调分类器，最后结果取平均。</li>
+</ul>
+</li>
+<li><p>学习：</p>
+<ol>
+<li><p>文中提到的ULMFiT方法，可以尝试使用在nlp迁移学习中。</p>
+</li>
+<li><p>之后在调模型的时候，可以使用文本中提到的一些技巧。</p>
+</li>
+</ol>
+</li>
+</ul>
 
                       
 
@@ -654,18 +619,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/11/12/hierarchical_classification/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          层次文本分类论文（Hierarchical Text Classification）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/12/vscode_vue/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vscode配置和vue环境搭建</div>
+    <a href="/2019/11/12/NER/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">领域适应NER论文</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -692,7 +648,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#论文总结"><span class="toc-number">1.</span> <span class="toc-text">论文总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#专利分类论文总结"><span class="toc-number">2.</span> <span class="toc-text">专利分类论文总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#论文简述"><span class="toc-number">3.</span> <span class="toc-text">论文简述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Text-Classification-Algorithms-A-Survey"><span class="toc-number">3.0.1.</span> <span class="toc-text">Text Classification Algorithms: A Survey</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#论文总结"><span class="toc-number">1.</span> <span class="toc-text">论文总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#论文简述"><span class="toc-number">2.</span> <span class="toc-text">论文简述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Text-Classification-Algorithms-A-Survey"><span class="toc-number">2.0.1.</span> <span class="toc-text">Text Classification Algorithms: A Survey</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Universal-Language-Model-Fine-tuning-for-Text-Classification"><span class="toc-number">2.0.2.</span> <span class="toc-text">Universal Language Model Fine-tuning for Text Classification</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -850,19 +806,15 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">leetcode</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">diaries</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -878,7 +830,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">text classification</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -891,6 +843,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vim</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">text classification</a>
               </li>
             
             <div class="clearfix"></div>
