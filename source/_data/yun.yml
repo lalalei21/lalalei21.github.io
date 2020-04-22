@@ -1,0 +1,82 @@
+avatar:
+  url: /images/avatar.jpeg
+
+favicon: /images/favicon.png
+
+banner:
+  enable: true
+  title: 啦啦蕾的日常
+  src: /js/ui/banner.js
+
+cursor:
+  enable: true
+  # default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  # pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  # text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+
+albums:
+  enable: true
+
+footer:
+  since: 2019
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: "2019-08-08T00:00:00"
+  # custom_text: ""
+
+tags:
+  Vue: "#4fc08d"
+  Hexo: "0E834D"
+
+categories:
+  笔记: dimgray
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  archives:
+    path: /archives
+    icon: icon-archive-line
+  tags:
+    path: /tags
+    icon: icon-price-tag-3-line
+  categories:
+    path: /categories
+    icon: icon-folder-2-line
+  custom:
+    title: 文档
+    path: https://yun.yunyoujun.cn
+    icon: icon-settings-line
+
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: atom.xml # config.feed.path
+    icon: icon-rss-line
+    color: orange
+  - name: GitHub
+    link: https://github.com/lalalei21
+    icon: icon-github-line
+    color: "#181717"
+  - name: E-Mail
+    link: mailto:15623600813@163.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+
+reward:
+  - name: 支付宝
+    path: /images/alipay.jpg
+    color: "#00A3EE"
+    icon: icon-alipay-line
+  - name: 微信支付
+    path: /images/weixin.jpg
+    color: "#2DC100"
+    icon: icon-wechat-pay-line
+
+reward_settings:
+  enable: true
+  comment: 我很可爱，请给我钱
