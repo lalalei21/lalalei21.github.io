@@ -1,0 +1,506 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Text Classification 文本分类论文"><meta name="keywords" content="NLP"><meta name="author" content="lalalei"><meta name="copyright" content="lalalei"><meta name="theme-color" content="#0078E7"><title>Text Classification 文本分类论文 | 啦啦蕾的日常</title><link rel="shortcut icon" href="/images/favicon.png"><link rel="mask-icon" href="/images/favicon.png" color="#0078E7"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script id="yun-config">
+    let Yun = window.Yun || {};
+    let CONFIG = {"root":"/","title":"啦啦蕾的日常","version":"0.6.0","anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><script src="//at.alicdn.com/t/font_1140697_n3htx7s57pp.js" async></script><meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/css/prism.css" type="text/css"></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle sidebar-toggle-fixed hty-icon-button"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><aside class="sidebar"><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc sidebar-nav-active hty-icon-button" data-target="post-toc-wrap" title="Table of Contents"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="Overview"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about" title="lalalei"><img loading="lazy" src="/images/avatar.jpeg" alt="lalalei"></a><div class="site-author-name"><a href="/about/">lalalei</a></div><a class="site-name" href="/about/site.html">啦啦蕾的日常</a><sub class="site-subtitle"></sub><div class="site-desciption">认清这个世界，并爱她～</div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="Home"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item site-state-posts"><a href="/archives" title="Archives"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">14</span></a></div><div class="site-state-item site-state-categories"><a href="/categories" title="Categories"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">8</span></a></div><div class="site-state-item site-state-tags"><a href="/tags" title="Tags"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">9</span></a></div><a class="site-state-item hty-icon-button" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/lalalei21" title="GitHub" target="_blank" style="color:#181717"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:15623600813@163.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div></div><script defer src="/js/sidebar.js"></script><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#论文总结"><span class="toc-number">1.</span> <span class="toc-text">论文总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#论文简述"><span class="toc-number">2.</span> <span class="toc-text">论文简述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Text-Classification-Algorithms-A-Survey"><span class="toc-number">2.1.</span> <span class="toc-text">Text Classification Algorithms: A Survey</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Convolutional-Neural-Networks-for-Sentence-Classification"><span class="toc-number">2.2.</span> <span class="toc-text">Convolutional Neural Networks for Sentence Classification</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#A-Convolutional-Neural-Network-for-Modeling-Sentences"><span class="toc-number">2.3.</span> <span class="toc-text">A Convolutional Neural Network for Modeling Sentences</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Adaptive-Convolution-for-Text-Classification"><span class="toc-number">2.4.</span> <span class="toc-text">Adaptive Convolution for Text Classification</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Universal-Language-Model-Fine-tuning-for-Text-Classification"><span class="toc-number">2.5.</span> <span class="toc-text">Universal Language Model Fine-tuning for Text Classification</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EDA-Easy-Data-Augmentation-Techniques"><span class="toc-number">2.6.</span> <span class="toc-text">EDA: Easy Data Augmentation Techniques</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Sequential-Learning-of-Convolutional-Features-for-Effective-Text-Classiﬁcation"><span class="toc-number">2.7.</span> <span class="toc-text">Sequential Learning of Convolutional Features for Effective Text Classiﬁcation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enhancing-Local-Feature-Extraction-with-Global-Representation-for-Neural-Text-Classification"><span class="toc-number">2.8.</span> <span class="toc-text">Enhancing Local Feature Extraction with Global Representation for Neural Text Classification</span></a></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="post-block" itemscope itemtype="http://schema.org/Article"><link itemprop="mainEntityOfPage" href="http://yoursite.com/nlp/text_classification/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="lalalei"><meta itemprop="description" content="Text Classification 文本分类论文"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="啦啦蕾的日常"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">Text Classification 文本分类论文</h1><div class="post-meta"><div class="post-time" style="display:inline-block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="Created: 2019-11-12 14:52:26" itemprop="dateCreated datePublished" datetime="2019-11-12T14:52:26+08:00">2019-11-12</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <time title="Modified: 2020-04-22 21:39:26" itemprop="dateModified" datetime="2020-04-22T21:39:26+08:00">2020-04-22</time></div><div class="post-classify"><span class="post-category"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a class="category" href="/categories/%E5%95%A6%E5%95%A6%E8%95%BE%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BD%9E/" itemprop="url" rel="index"><span itemprop="text">啦啦蕾的学习笔记～</span></a></span> > <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a class="category" href="/categories/%E5%95%A6%E5%95%A6%E8%95%BE%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BD%9E/%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="text">论文分享</span></a></span> > <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a class="category" href="/categories/%E5%95%A6%E5%95%A6%E8%95%BE%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BD%9E/%E8%AE%BA%E6%96%87%E5%88%86%E4%BA%AB/%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/" itemprop="url" rel="index"><span itemprop="text">文本分类</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag" href="/tags/NLP/"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">NLP</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content post-markdown"><p><code>文本分类</code>是<code>自然语言处理</code>中的一项基础任务，目的是将文本分配给指定标签中的一个或多个。<br>通过将近年来看过的顶会论文集中到一起，希望对以后的工作有一定的帮助。<br>参考链接：<a href="https://paperswithcode.com/task/text-classification">https://paperswithcode.com/task/text-classification</a></p>
+<a id="more"></a>
+
+
+
+<h3 id="论文总结"><a href="#论文总结" class="headerlink" title="论文总结"></a>论文总结</h3><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>论文标题</th>
+<th>发表机构</th>
+<th>简单描述</th>
+<th>论文及代码</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Text Classification Algorithms: A Survey</td>
+<td>2019.4</td>
+<td>文本分类综述。<a href="#Text-Classification-Algorithms:-A-Survey">more</a></td>
+<td><a href="https://github.com/kk7nc/Text_Classification">GitHub</a></td>
+<td><a href="https://www.arxiv-vanity.com/papers/1904.08067/">weblink</a></td>
+</tr>
+<tr>
+<td>14.1</td>
+<td>Convolutional Neural Networks for Sentence Classification</td>
+<td>ACL 2014</td>
+<td>TextCNN。<a href="#Convolutional-Neural-Networks-for-Sentence-Classification">more</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14.2</td>
+<td>A Convolutional Neural Network for Modeling Sentences</td>
+<td>ACL 2014</td>
+<td>DCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15.1</td>
+<td>Recurrent convolutional neural networks for text classification</td>
+<td>AAAI 2015</td>
+<td>RCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15.2</td>
+<td>A Sensitivity Analysis of Convolutional Neural Networks for Sentence Classification</td>
+<td>2015</td>
+<td>对TextCNN的参数进行对比实验，得出设置经验。</td>
+<td><a href="https://arxiv.org/pdf/1510.03820.pdf">论文</a></td>
+<td></td>
+</tr>
+<tr>
+<td>16.1</td>
+<td>Hierarchical Attention Networks for Document Classification</td>
+<td>NAACL 2016</td>
+<td>HAN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16.2</td>
+<td>Recurrent Neural Network for Text Classification with Multi-Task Learning</td>
+<td>IJCAI 2016</td>
+<td>TextRNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17.1</td>
+<td>Deep Pyramid Convolutional Neural Networks for Text Categorization</td>
+<td>ACL 2017</td>
+<td>DPCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17.2</td>
+<td>Very deep convolutional networks for text classification</td>
+<td>EACL 2017</td>
+<td>VDCNN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17.3</td>
+<td>Bag of Tricks for Efficient Text Classification</td>
+<td>EACL 2017</td>
+<td>FastText</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17.4</td>
+<td>A Structured Self-Attentive Sentence Embedding</td>
+<td>ICLR 2017</td>
+<td>Self-Attention</td>
+<td></td>
+<td>Attention.4</td>
+</tr>
+<tr>
+<td>18.1</td>
+<td>Joint embedding of words and labels for text classification</td>
+<td>ACL 2018</td>
+<td>LEAM</td>
+<td><a href="https://github.com/guoyinwang/LEAM">tensorflow</a></td>
+<td></td>
+</tr>
+<tr>
+<td>18.2</td>
+<td>Baseline Needs More Love-On Simple Word-Embedding-Based Models and Associated Pooling Mechanisms</td>
+<td>ACL 2018</td>
+<td>SWEM</td>
+<td><a href="https://github.com/dinghanshen/SWEM">tensorflow</a></td>
+<td></td>
+</tr>
+<tr>
+<td>18.3</td>
+<td>Sequence Generation Model for Multi-Label Classification</td>
+<td>COLING 2018</td>
+<td>SGM</td>
+<td><a href="https://github.com/lancopku/SGM">pytorch</a></td>
+<td></td>
+</tr>
+<tr>
+<td>18.4</td>
+<td>Investigating Capsule Networks with Dynamic Routing for Text Classification</td>
+<td>EMNLP 2018</td>
+<td>Capsule。<a href="https://blog.csdn.net/u014665013/article/details/89109351">more</a></td>
+<td></td>
+<td><a href="https://zhuanlan.zhihu.com/p/33955995">理解胶囊网络</a></td>
+</tr>
+<tr>
+<td>18.5</td>
+<td><a href="#Universal-Language-Model-Fine-tuning-for-Text-Classification">Universal Language Model Fine-tuning for Text Classification</a></td>
+<td>ACL 2018</td>
+<td>ULMFiT。通用语言模型微调，迁移学习方法。包含很多训练技巧。</td>
+<td><a href="https://www.aclweb.org/anthology/P18-1031/">论文</a><br>官网</td>
+<td></td>
+</tr>
+<tr>
+<td>18.6</td>
+<td>Multi-Task Label Embedding for Text Classification</td>
+<td>EMNLP 2018</td>
+<td>1.利用标签描述信息 2.多任务学习，新任务来时可scale和transfer 3.增加新的有标注/无标注的数据任务时，hot/cold/zero update</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19.1</td>
+<td>Graph Convolutional Networks for Text Classification</td>
+<td>AAAI 2019</td>
+<td>GCN。将文本和单词分别作为节点，文本与单词(TF-IDF)、单词间(PMI)的联系作为边。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19.2</td>
+<td>Adaptive Convolution for Text Classification</td>
+<td>NAACL  2019</td>
+<td>自适应卷积，根据不同输入（上一个卷积块的输出）动态生成filter。提出hash genetation。</td>
+<td><a href="https://www.aclweb.org/anthology/attachments/N19-1256.Software.zip">pytorch</a></td>
+<td></td>
+</tr>
+<tr>
+<td>19.3</td>
+<td>EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks</td>
+<td>EMNLP 2019</td>
+<td>文本分类的数据增强技术。同义词替换、随机插入、交换、删除。<a href="#EDA:-Easy-Data-Augmentation-Techniques">more</a></td>
+<td><a href="https://arxiv.org/abs/1901.11196">论文</a><br><a href="https://github.com/jasonwei20/eda_nlp">keras</a></td>
+<td></td>
+</tr>
+<tr>
+<td>19.4</td>
+<td>Sequential Learning of Convolutional Features for Effective Text Classiﬁcation</td>
+<td>EMNLP 2019</td>
+<td>SCARN。联合CNN、RNN、Attention的优点。<a href="#Sequential-Learning-of-Convolutional-Features-for-Effective-Text-Classiﬁcation">more</a></td>
+<td><a href="https://www.aclweb.org/anthology/D19-1567.pdf">论文</a></td>
+<td></td>
+</tr>
+<tr>
+<td>19.5</td>
+<td>Enhancing Local Feature Extraction with Global Representation for Neural Text Classification</td>
+<td>EMNLP 2019</td>
+<td>利用全局表示增加局部特征抽取。<a href="#Enhancing-Local-Feature-Extraction-with-Global-Representation-for-Neural-Text-Classification">more</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Topic Memory Networks for Short Text Classification</td>
+<td>EMNLP  2018</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Neural Attentive Bag-of-Entities Model for Text Classification</td>
+<td>CoNLL 2019</td>
+<td>利用实体信息</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Simplifying Graph Convolutional Networks</td>
+<td>ICML 2019</td>
+<td>GCN</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Sentiment Classification using Document Embeddings trained with Cosine Similarity</td>
+<td>ACL 2019</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Improved neural network-based multi-label classification with better initialization leveraging label co-occurrence</td>
+<td>NAACL 2016</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Compositional coding capsule network with k-means routing for text classification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Large-scale Multi-label Text Classification</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>SEMI-SUPERVISED CLASSIFICATION WITH GRAPH CONVOLUTIONAL NETWORKS</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="论文简述"><a href="#论文简述" class="headerlink" title="论文简述"></a>论文简述</h3><h4 id="Text-Classification-Algorithms-A-Survey"><a href="#Text-Classification-Algorithms-A-Survey" class="headerlink" title="Text Classification Algorithms: A Survey"></a>Text Classification Algorithms: A Survey</h4><p>大多数文本分类系统可以分解为以下四个阶段：特征提取、降维、分类器选择和模型评估。</p>
+<p>文本分类分为4个级别：文档级别、段落级别、句子级别、子句级别（算法获得句子内的子表达式的相关类别）</p>
+<ol>
+<li><p><strong>Text Preprocessing</strong> 数据预处理：消除噪音<br>分词、去除停用词、俚语和缩略词、关键标点符号和特殊字符、拼写检查、Stemming 词干提取等</p>
+</li>
+<li><p><strong>Feature Extraction</strong> 特征抽取：信息特征化</p>
+<ul>
+<li><strong>Weighted word</strong> 加权词：<ul>
+<li><strong>TF/Bag of Words (BoW)</strong>：最常用的，词袋，文本的主体被认为是一袋单词，单词列表按照个数被创建。忽略了语法和顺序，但是利用了计数特征。容易导致一些特别常用的词在文本表示中占主要地位。使用one-hot编码，由于词汇量可能达到数百万，导致矩阵十分稀疏。</li>
+<li><strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>：tf 改进了召回率，idf 提高了准确率。克服了文档中常见术语的限制，但是无法考虑词之间的相似性。</li>
+</ul>
+</li>
+<li><strong>Word embedding</strong> 词嵌入:<ul>
+<li><strong>Word2Vec</strong>：CBOW-预测给定上下文的单词、Skip-gram model-预测给定单词的上下文，保持句子的句法和语义信息。缺点是没有充分利用语料信息。</li>
+<li><strong><a href="http://www.fanyeong.com/2018/02/19/glove-in-detail/#comments">Global Vectors</a> (<a href="https://blog.csdn.net/mr_tyting/article/details/80180780">GloVe</a>)</strong>：与word2vec相似。但是基于全局词频统计的词表征工具，它把单词表示成一个由实数组成的向量，捕捉到单词间的语义信息，如相似性、类比性，通过对向量的计算，如欧几里得距离和余弦相似度，可以计算两个单词的相似性。</li>
+<li><strong>FastText</strong>：类似于CBOW，两种模型都是基于Hierarchical Softmax，但引入了N-gram信息。适合大型数据+高效的训练速度，支持多语言表达，专注于文本分类。</li>
+<li><strong>Context2vec</strong>：从双向语言模型学习词向量。<a href="https://zhuanlan.zhihu.com/p/63115885"><strong>ELMo</strong></a>，相对于<strong>GPT</strong>和<strong>Bert</strong>，lstm特征抽取能力弱于transformer，双向拼接融合比一体化融合弱。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Dimensionality Reduction</strong> 降维：</p>
+<ul>
+<li><strong>Component Analysis</strong>：成分分析<ul>
+<li><strong><a href="https://zhuanlan.zhihu.com/p/32412043">PCA</a></strong>：主成分分析，最重要的降维方法之一。PCA作为降噪算法也是一个有价值的工具，可以帮助避免过拟合问题。</li>
+<li><strong><a href="">ICA</a></strong>：独立成分分析</li>
+<li><strong>LDA</strong>：</li>
+<li><strong>NMF</strong>：</li>
+</ul>
+</li>
+<li><strong>Random Projection</strong>：</li>
+<li><strong>Autoencoder</strong>：<ul>
+<li>CNN</li>
+<li>RNN：</li>
+</ul>
+</li>
+<li><strong>T-distributed Stochastic Neighbor Embedding (t-SNE)</strong>：</li>
+</ul>
+</li>
+<li><p><strong>Classification Techniques</strong> 分类器：</p>
+<ul>
+<li><p><strong>传统方法 - Rocchio Classification</strong>：</p>
+</li>
+<li><p><strong>集成算法</strong>：</p>
+<p>Boosting、Bagging。投票分类技术。Boosting，弱学习算法</p>
+</li>
+<li><p><strong>传统且流行的算法</strong>：</p>
+<p>Logistic Regression (LR)、Naïve Bayes (NB)、K-Nearest Neighbor (KNN)、Support Vector Machine (SVM)</p>
+</li>
+<li><p><strong>基于树的算法</strong>：</p>
+<p>Decision Tree、Random Forest</p>
+</li>
+<li><p><strong>Conditional Random Field (CRF)</strong>：</p>
+</li>
+<li><p><strong>Deep Learning</strong>：<br>RNN、CNN、DBN、HAN</p>
+</li>
+<li><p><strong>Semi-Supervised Learning</strong>：</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Evaluation</strong> 评价方法：</p>
+<ul>
+<li>confusion matrix 混淆矩阵、accuracy 准确率、precision 精确率、recall 召回率、F1-score</li>
+<li>macro-averaging、micro-averaging</li>
+<li>Matthews Correlation Coefficient (MCC)</li>
+<li>Receiver Operating Characteristics (ROC)</li>
+<li>Area Under ROC Curve (AUC)</li>
+</ul>
+</li>
+</ol>
+<p>&nbsp;</p>
+<h4 id="Convolutional-Neural-Networks-for-Sentence-Classification"><a href="#Convolutional-Neural-Networks-for-Sentence-Classification" class="headerlink" title="Convolutional Neural Networks for Sentence Classification"></a>Convolutional Neural Networks for Sentence Classification</h4><ul>
+<li><p>摘要</p>
+<p>将基于预训练词向量的卷积神经网络用于句子级别分类。</p>
+<p>一个简单的CNN只需很少的超参数和静态向量就能在多个数据上取得优异的结果。</p>
+<p>通过微调学习特定任务的向量可以进一步提升性能。</p>
+<p>对架构提出了一个简单的修改，允许同事使用特定任务的和静态的向量。</p>
+</li>
+<li><p>介绍</p>
+<p>文本分类的关键在于准确提炼文本的中心思想，CNN利用卷积操作提取局部特征，利用池化提取关键信息。</p>
+</li>
+<li><p>模型</p>
+<img src="https://raw.githubusercontent.com/lalalei21/backupBlog/master/paper_images/textcnn.png" alt="textcnn" style="zoom:40%;" / loading="lazy">
+
+<ul>
+<li><p>基础结构</p>
+<p>长度为 $n$ 的句子可以表示为：$\mathbf{x}_{1:n}=\mathbf{x}_1\oplus\mathbf{x}_2\ \oplus,…\oplus,\mathbf{x}_n$</p>
+<p>一个 $filter$ 为：$\bf{w} \in \mathbb {R}^{hk}$</p>
+<p>对 $h$ 个词的窗口进行<strong>卷积</strong>：$c_i = f(\mathbf{w} \cdot \mathbf{x}_{i:i+h-1} + b)$</p>
+<p>产生一个$feature\ map$：$\mathbf{c} = [c_1,c_2,…,c_{n-h+1}] \in \mathbb{R}^{n-h+1}$</p>
+<p><strong>最大池化</strong>之后：$\hat{c}=max {\mathbf{c}}$</p>
+<p>有 $m$ 个$filter$：$\mathbf{z} = [\hat{c_1},\hat{c_2},…,\hat{c_m}]$</p>
+</li>
+<li><p>正则化</p>
+<p>池化层后面加上全连接SoftMax层做分类任务。为了防止过拟合，一般会添加L2和Dropout正则化方法。Dropout：$y = \mathbf{w} \cdot(\mathbf{z}\ \circ\ \mathbf{r}) + b$</p>
+</li>
+</ul>
+</li>
+<li><p>模型变体</p>
+<p><strong>CNN-rand</strong>：所有词向量被随机初始化。</p>
+<p><strong>CNN-static</strong>：使用word2vec预训练词向量，其他unknown词随机初始化，训练过程中保持不变。</p>
+<p><strong>CNN-non-static</strong>：使用预训练词向量，训练过程中微调。</p>
+<p><strong>CNN-multichannel</strong>：使用两个通道，一个为static，一个为non-static，微调时只有一个通道更新参数。都用word2vec初始化。</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="A-Convolutional-Neural-Network-for-Modeling-Sentences"><a href="#A-Convolutional-Neural-Network-for-Modeling-Sentences" class="headerlink" title="A Convolutional Neural Network for Modeling Sentences"></a>A Convolutional Neural Network for Modeling Sentences</h4><ul>
+<li>摘要</li>
+</ul>
+<h4 id="Adaptive-Convolution-for-Text-Classification"><a href="#Adaptive-Convolution-for-Text-Classification" class="headerlink" title="Adaptive Convolution for Text Classification"></a>Adaptive Convolution for Text Classification</h4><ul>
+<li>摘要</li>
+</ul>
+<ul>
+<li>介绍</li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="Universal-Language-Model-Fine-tuning-for-Text-Classification"><a href="#Universal-Language-Model-Fine-tuning-for-Text-Classification" class="headerlink" title="Universal Language Model Fine-tuning for Text Classification"></a>Universal Language Model Fine-tuning for Text Classification</h4><ul>
+<li><p>摘要</p>
+<p>迁移学习在计算机视觉方面取得了很多成功，而在自然语言处理还没有太多进展，仅仅停留在使用 word2vec 或多任务学习的阶段，需要从头开始训练。<strong>本文提出了一个针对NLP的有效迁移学习方法，通用语言模型微调(ULMFiT)，同时介绍了用于微调模型的相关技巧。</strong>而且在100个小标注样本上微调的性能和100倍数据从头开始训练的性能等价。</p>
+</li>
+<li><p>介绍</p>
+<p>很多深度学习模型，要 <strong>从头开始训练，大量数据，收敛时间长</strong>，考虑迁移学习技术 - 微调的预训练词向量。</p>
+<p>基于微调的迁移技术在NLP还不成功。</p>
+<p>LM fine-tuning：<strong>小数据上过拟合，用分类器微调时会灾难性遗忘LM的知识</strong>。</p>
+<p>根据深度学习模型 <strong>“越底层的特征越通用，越顶层的特征越特殊”</strong>这个特点，可以将其分为两部分，底部是一个通用的模型，由一个大型数据集预训练得到，其能够使小数据集避免从头开始训练（随机初始化参数通常比预训练参数微调要差），顶部则根据下游任务从头开始训练。</p>
+</li>
+<li><p>模型</p>
+<p><strong>General-domain LM pretraining</strong>：在Wikitext-103数据集（包含 28,595 篇维基百科文章和 1030 亿个单词）上训练语言模型，从而捕获不同层次文本的一般特征。</p>
+<p><strong>Target task LM fine-tuning</strong>：针对目标任务的小数据微调LM。使用了2个trick，学习不同层次文本针对特定任务的特征。</p>
+<ul>
+<li><strong>Disciminative fine-tuning 区分微调</strong>：由于不同层捕获的信息不同，需要不同程度的微调。给每层设置不同的学习率（底层通用较小，顶层特殊较大），先通过微调最后一层参数确定一个合适的学习率，然后下一层使用上一层1/2.6的学习率。</li>
+<li><strong>Slanted triangular learning rates 斜三角学习率</strong>：学习率先快增后慢减。为了适应特定任务特征的参数，让模型在开始先用较小学习率，快速增大收敛到合适的区域，再从大学习率开始慢慢减小进行优化。</li>
+</ul>
+<p><strong>Target task classifier fine-tuning</strong>：训练顶层分类器。用了4个trick。</p>
+<ul>
+<li><strong>Concat pooling</strong>：如仅使用RNN最后时刻步的隐层状态，会丢失很多信息。所以将最后时刻步的隐层、隐层的最大池化、平均池化连接在一起。</li>
+<li><strong>Gradual unfreezing</strong>：直接 fine-tune 整个网络会导致网络遗忘之前预训练得到的通用特征，但是fine-tune过于谨慎会导致收敛太慢。本文使用逐层解冻的方法，从最后一层（包括最特殊的知识）开始自顶向下，每一个epoch加入一个解冻层，即1epoch微调顶层，2epoch微调上两层，以此类推。文中提到的<strong>chain-thaw</strong> 每次训练单独一层，不用累加的方式。</li>
+<li><strong>BPTT for Text Classification（BPT3C）</strong>：使用基于时间的反向传播(BPTT)来训练语言模型，使得能够对大的输入序列进行梯度传播。文档划分为batch_size为b的批次；每个batch开始训练前，用上一个batch的最终状态初始化模型；跟踪平均值和最大池的隐藏状态；梯度反向传播到隐层状态有用的batch。</li>
+<li><strong>Bidirectional language model</strong>：预训练前向LM和后向LM，每个LM独立使用BPT3C微调分类器，最后结果取平均。</li>
+</ul>
+</li>
+<li><p>学习：</p>
+<ol>
+<li><p>文中提到的ULMFiT方法，可以尝试使用在nlp迁移学习中。</p>
+</li>
+<li><p>之后在调模型的时候，可以使用文本中提到的一些技巧。</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="EDA-Easy-Data-Augmentation-Techniques"><a href="#EDA-Easy-Data-Augmentation-Techniques" class="headerlink" title="EDA: Easy Data Augmentation Techniques"></a>EDA: Easy Data Augmentation Techniques</h4><ul>
+<li><p>摘要</p>
+<p>提出<strong>EDA</strong>，简单的数据增强技术来提升文本分类任务的性能。包括同义词替换、随机插入、随机交换、随机删除。在<strong>小数据集</strong>上结果较强；使用<strong>50%的训练集</strong>可达到所有数据的相同的精度。</p>
+</li>
+<li><p>方法</p>
+<p><strong>同义词替换</strong>：忽略停用词，随机选择n个词，从同义词表中随机选择一个替换。</p>
+<p><strong>随机插入</strong>：忽略停用词，随机选择一个词的同义词，插入任意位置。重复n次。</p>
+<p><strong>随机交换</strong>：随机选择句子中两个词，交换位置。重复n次。</p>
+<p><strong>随机删除</strong>：以概率p随机删除句子中的词。</p>
+<p>用$\alpha$表示句子中被改变的词的比例。$n=\alpha l$。$n_{aug}$表示增加的句子数。</p>
+</li>
+<li><p>结论</p>
+<ol>
+<li>EDA增加的数据并未改变真实标签。其中最有效的增强方法是随机删除，随机交换次之。在小数据集上有效，使结果更具有鲁棒性，而对于大型数据集效果微不足道。比其他的数据增强方法（<a href="https://arxiv.org/abs/1703.00955">VAE</a>、<a href="https://arxiv.org/abs/1805.06201">语言模型</a>、<a href="http://arxiv.org/abs/1903.09244">回译</a>等）简单很多。</li>
+<li>若是使用了BERT等预训练模型技术，EDA是不需要的。</li>
+<li>里面的数据增强的方法值得以后借鉴和进一步思考。</li>
+</ol>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="Sequential-Learning-of-Convolutional-Features-for-Effective-Text-Classiﬁcation"><a href="#Sequential-Learning-of-Convolutional-Features-for-Effective-Text-Classiﬁcation" class="headerlink" title="Sequential Learning of Convolutional Features for Effective Text Classiﬁcation"></a>Sequential Learning of Convolutional Features for Effective Text Classiﬁcation</h4><ul>
+<li><p>摘要</p>
+<p>CNN的关键挑战：卷积滤波器和最大池化。提出SCARN模型，同时利用CNN和RNN的优点。</p>
+</li>
+<li><p>介绍</p>
+<p>在图像处理方面，深度卷积神经网络的有效性有很好的解释，但对于文本它的成功并没有太多理解。</p>
+<p>问题1：固定卷积窗口是否保留了文本的序列信息？</p>
+<p>问题2：最大池化选择的特征是否总是输入的最重要特征？</p>
+</li>
+<li><p>理解卷积和池化</p>
+<ul>
+<li><p>卷积操作</p>
+<p>缺点：<strong>遗失了顺序信息</strong>。将输入句子随机打乱/交替打乱，并使用卷积窗口从1到最长句子长度进行实验。实验结果说明CNN不能完全整合顺序信息，且获取序列信息的能力随着窗口变大而减小。</p>
+<p>优点：<strong>能够学习特定任务的词嵌入</strong>。卷积层本质上是一个嵌入变换，可以将词原有的语义知识嵌入转换为适合此任务的嵌入。卷积层能够鲁棒的创建一个处理任何特定任务噪声的变换。</p>
+</li>
+<li><p>池化操作</p>
+<p>越多不代表越好。实验选择所有滤波器的第n个最高值，n增加时，数据集性能随机变化，说明n的大小与任务的重要性之间没有明显联系。</p>
+</li>
+</ul>
+</li>
+<li><p>模型</p>
+<p>两个子网络：卷积循环网络，使用k个filters对文本进行单窗口卷积；循环注意力网络。</p>
+<img src="https://raw.githubusercontent.com/lalalei21/backupBlog/master/paper_images/scarn.png" alt="scarn.png" style="zoom:58%;" / loading="lazy">
+</li>
+<li><p>实验分析</p>
+<ol>
+<li><p>SCARN模型比线性模型和基于词向量的模型好，因为它们不能合并顺序信息。</p>
+</li>
+<li><p>比LSTM/Bi-LSTM模型性能好，因为它们虽然可以<strong>学习顺序信息</strong>，但缺乏<strong>学习特定任务的特征表示</strong>的能力。</p>
+</li>
+<li><p>比CNN/DCNN好，因为缺乏RNN采用的学习顺序信息的方式。</p>
+</li>
+<li><p>比concat-SCARN模型好，就是将卷积输出和原始词向量进行连接，连接后的输出使用LSTM和Attention。因为卷积输出和原始词向量的<strong>分布不一致</strong>，但是如果加上batch normalization又回破坏潜在的语义信息。而SCARN模型的每个子网输出都使用relu激活，使之有相似的分布。</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="Enhancing-Local-Feature-Extraction-with-Global-Representation-for-Neural-Text-Classification"><a href="#Enhancing-Local-Feature-Extraction-with-Global-Representation-for-Neural-Text-Classification" class="headerlink" title="Enhancing Local Feature Extraction with Global Representation for Neural Text Classification"></a>Enhancing Local Feature Extraction with Global Representation for Neural Text Classification</h4><ul>
+<li><p>摘要</p>
+<p>传统的局部特征驱动模型都通过<strong>深度叠加</strong>或者<strong>混合建模</strong>来学习长依赖的。</p>
+<p>本文提出新的<strong>Encoder1-Encoder2</strong>结构，将<strong>全局信息融合到局部特征</strong>中。Encoder1作为全局信息提供者，Encoder2作为局部特征提取器直接送入分类器中。同时还会设计它们之间的交互。</p>
+<p>此模型能够学习任务特定的局部特征，从而避免复杂的上层操作。</p>
+</li>
+<li><p>介绍</p>
+<p>local feature driven models：利用显式局部提取器识别关键局部模式，然后分类。</p>
+<p>局部特征抽取虽然有好的解释性和性能，但缺点仍存在。如果局部提取器从一开始不能捕获到重要信息，那么就需要复杂的上层结构来修正不精确的局部表现。</p>
+<p>为了解决此问题，作者独创性的使用两个编码器，一个使用任意模型抓去全局信息，一个</p>
+</li>
+<li></li>
+</ul>
+</div><div id="reward-container"><span class="hty-icon-button button-glow" id="reward-button" title="Donate" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === &quot;none&quot;) ? &quot;block&quot; : &quot;none&quot;;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-hand-coin-line"></use></svg></span><div id="reward-comment">我很可爱，请给我钱</div><div id="qr" style="display:none;"><div style="display:inline-block"><a href="/images/alipay.jpg"><img loading="lazy" src="/images/alipay.jpg" alt="支付宝" title="支付宝"></a><div><span style="color:#00A3EE"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-alipay-line"></use></svg></span></div></div><div style="display:inline-block"><a href="/images/weixin.jpg"><img loading="lazy" src="/images/weixin.jpg" alt="微信支付" title="微信支付"></a><div><span style="color:#2DC100"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-wechat-pay-line"></use></svg></span></div></div></div></div><ul class="post-copyright"><li class="post-copyright-author"><strong>Post author: </strong>lalalei</li><li class="post-copyright-link"><strong>Post link: </strong><a href="http://yoursite.com/nlp/text_classification/" title="Text Classification 文本分类论文">http://yoursite.com/nlp/text_classification/</a></li><li class="post-copyright-license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> unless stating additionally.</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/nlp/hierarchical_classification/" rel="prev" title="层次文本分类论文（Hierarchical Text Classification）"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">层次文本分类论文（Hierarchical Text Classification）</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/tool/vscode_vue/" rel="next" title="vscode配置和vue环境搭建"><span class="post-nav-text">vscode配置和vue环境搭建</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div id="comment"><div class="comment-tooltip text-center"><span>若您无 GitHub 账号，可直接在下方匿名评论。</span><br><span>若您想及时得到回复提醒，建议跳转 GitHub Issues 评论。</span><br><span>若没有本文 Issue，您可以使用 Comment 模版新建。</span><br><a class="hty-button hty-button--raised" id="github-issues" href="https://github.com/YunYouJun/yunyoujun.github.io/issues?q=is:issue+Text Classification 文本分类论文">GitHub Issues</a></div></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2019 – 2020 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> lalalei</span></div><div class="powered"><span>Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> v4.2.0</span><span class="footer-separator">|</span><span>Theme - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v0.6.0</span></div><div class="live_time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  window.setTimeout(blog_live_time, 1000);
+  const start = new Date('2019-08-08T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = " " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
+}
+blog_live_time();
+</script></div></footer><a class="hty-icon-button" id="goUp" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a></div><script defer src="/js/utils.js"></script><script defer src="/js/hexo-theme-yun.js"></script></body></html>
